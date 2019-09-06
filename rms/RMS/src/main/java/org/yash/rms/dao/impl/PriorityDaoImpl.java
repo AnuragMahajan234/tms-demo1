@@ -1,0 +1,50 @@
+package org.yash.rms.dao.impl;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
+import org.yash.rms.dao.PriorityDao;
+import org.yash.rms.domain.Priority;
+
+
+@Repository
+public class PriorityDaoImpl implements PriorityDao {
+
+	@PersistenceContext(name = "mysql", type = PersistenceContextType.TRANSACTION)
+	private EntityManager entityManager;
+	
+	
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+	
+	@PersistenceContext
+	public void setEntityManager(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+	
+	private static final Logger logger = LoggerFactory.getLogger(PriorityDaoImpl.class);
+	
+	
+	public List<Priority> getAllPriorityTypes() {
+		
+		logger.info("getAllPriorityTypes method start");
+		
+		Session session = (Session) getEntityManager().getDelegate();
+			Criteria criteria = session.createCriteria(Priority.class);
+			List<Priority> priorities = criteria.list();
+			
+		logger.info("getAllPriorityTypes method end");
+			
+		return priorities;
+	}
+
+}

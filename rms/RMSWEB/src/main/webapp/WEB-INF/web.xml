@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>RMS</display-name>
+	
+	<!-- Enable escaping of form submission contents -->
+    <context-param>
+        <param-name>defaultHtmlEscape</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    
+	<listener>  
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+		
+	
+	<context-param>  
+		<param-name>log4jConfigLocation</param-name>  
+		<param-value>/WEB-INF/log4j-config/log4j-${IafConfigSuffix}.properties</param-value>
+	</context-param>
+	
+	
+	<filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    
+   <filter>
+    <filter-name>CacheFilter</filter-name>
+    <filter-class>org.yash.rms.filter.CacheFilter</filter-class>
+	</filter>
+
+    <filter>
+        <filter-name>HttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    
+	<!-- <filter>
+	    <filter-name>hibernateFilter</filter-name>
+	    <filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+	    <init-param>
+        <param-name>singleSession</param-name>
+        <param-value>true</param-value>
+    </init-param>
+	    
+	</filter>
+
+	<filter-mapping>
+	    <filter-name>hibernateFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+	    <filter-name>CacheFilter</filter-name>
+	    <url-pattern>*.png</url-pattern>
+	    <url-pattern>*.gif</url-pattern>
+	    <url-pattern>*.jpg</url-pattern>
+	    <url-pattern>*.ico</url-pattern>
+	    <url-pattern>*.js</url-pattern>
+	</filter-mapping> -->
+	
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+        <filter-name>HttpMethodFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+	<!-- Spring MVC -->
+	<servlet>
+		<servlet-name>spring-mvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/spring-configuration/spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>spring-mvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>	
+	 <listener>
+	<listener-class>net.bull.javamelody.SessionListener</listener-class>
+</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<!-- <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+</listener> -->
+	 <listener>
+      <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+    </listener>
+   
+<security-constraint>
+<web-resource-collection>
+<web-resource-name>
+
+</web-resource-name>
+<url-pattern>/*</url-pattern>
+<http-method>DELETE</http-method>
+<http-method>TRACE</http-method>
+<http-method>OPTIONS</http-method>
+<http-method>PATCH</http-method>
+<http-method>HEAD</http-method>
+</web-resource-collection>
+<auth-constraint/>
+</security-constraint>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring-configuration/applicationContext-*.xml
+			classpath:net/bull/javamelody/monitoring-spring.xml
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>locatorFactorySelector</param-name>
+		<param-value>classpath*:spring-configuration/beanRefContext.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>parentContextKey</param-name>
+		<param-value>rootContext</param-value>
+	</context-param>
+	<context-param>
+		<param-name>log4jExposeWebAppRoot</param-name>
+		<param-value>false</param-value>
+	</context-param>
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <url-pattern>/j_spring_security_logout</url-pattern>
+</filter-mapping>
+	
+	<!-- Waffle configuration start -->
+	
+	<filter>
+    <filter-name>SecurityFilter</filter-name>
+    <filter-class>waffle.servlet.NegotiateSecurityFilter</filter-class>   
+    <init-param>
+    	<param-name>principalFormat</param-name>
+    	<param-value>fqn</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>roleFormat</param-name>
+    	<param-value>both</param-value>
+    </init-param>
+    
+
+  <init-param>
+      <param-name>excludePatterns</param-name>
+      <param-value>
+        .*/rest/UnAuthRestImpl/auth.*
+      </param-value>
+  </init-param>
+    <init-param>
+    	<param-name>allowGuestLogin</param-name>
+    	<param-value>false</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>securityFilterProviders</param-name>
+    	<param-value>
+    		waffle.servlet.spi.NegotiateSecurityFilterProvider
+    		waffle.servlet.spi.BasicSecurityFilterProvider
+    	</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>waffle.servlet.spi.NegotiateSecurityFilterProvider/protocols</param-name>
+    	<param-value>
+    		NTLM
+    		Negotiate
+    	</param-value>
+    </init-param>
+    <init-param>    
+    	<param-name>waffle.servlet.spi.BasicSecurityFilterProvider/realm</param-name>
+    	<param-value>YASH</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>SecurityFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping> 
+	<!-- Waffle configuration end -->	
+	
+	<!-- CROS origin start -->
+	<!-- <filter>
+		<filter-name>CrosOriginFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	 -->
+	<filter-mapping>
+		<filter-name>crosOriginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
+
+	<!-- CROS origin end -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+        <location>/uncaughtException</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>404</error-code>
+        <location>/resourceNotFound</location>
+    </error-page>
+    
+    <session-config>
+    	<session-timeout>30</session-timeout>
+    </session-config>	
+    
+    <!--====================== Monitoring ===================================-->
+<!-- Custom CSS -->
+<filter>
+	<filter-name>customResourceFilter</filter-name>
+	<filter-class>net.bull.javamelody.CustomResourceFilter</filter-class>
+	<init-param>
+		<param-name>monitoring.css</param-name>
+		<param-value>/styles/monitoring.css</param-value>
+	</init-param>
+</filter>
+<filter-mapping>
+	<filter-name>customResourceFilter</filter-name>
+	<url-pattern>/monitoring</url-pattern>
+</filter-mapping>
+<!-- Monitor filter -->
+<filter>
+	<filter-name>monitoring</filter-name>
+	<filter-class>net.bull.javamelody.MonitoringFilter</filter-class>
+	<init-param>
+	<param-name>authorized-users</param-name>
+		<param-value>root_user:yash@123</param-value>
+		</init-param>
+			<init-param>
+		<param-name>storage-directory</param-name>
+		<param-value>logs/monitoring</param-value>
+	</init-param>
+	<init-param>
+		<param-name>url-exclude-pattern</param-name>
+		<param-value>(/images/.*|/js/.*|/styles/.*)</param-value>
+	</init-param>
+	<init-param>
+		<param-name>xyz.pqr</param-name>
+		<param-value>xyz.pqr@yash.com</param-value>
+	</init-param>
+	<init-param>
+		<param-name>mail-session</param-name>
+		<param-value>MailSession</param-value>
+	</init-param>
+	<init-param>
+		<param-name>mail-periods</param-name>
+		<param-value>week,month</param-value>
+	</init-param>
+</filter>
+<filter-mapping>
+	<filter-name>monitoring</filter-name>
+	<url-pattern>/*</url-pattern>
+	
+</filter-mapping>
+<filter>
+<filter-name>oemInViewFilter</filter-name>
+<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+<init-param>
+<param-name>entityManagerFactoryBeanName</param-name>
+<param-value>entityManagerFactory</param-value>
+</init-param>
+</filter>
+<filter-mapping>
+<filter-name>oemInViewFilter</filter-name>
+<url-pattern>/rest/*</url-pattern>
+</filter-mapping>
+
+    <servlet>
+<servlet-name>CXFServlet</servlet-name>
+<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>CXFServlet</servlet-name>
+<url-pattern>/rest/*</url-pattern>
+</servlet-mapping>
+
+</web-app>  

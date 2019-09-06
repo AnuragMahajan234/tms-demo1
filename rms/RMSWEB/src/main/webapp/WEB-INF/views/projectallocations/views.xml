@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    
+    <definition extends="defaultdashboard" name="projectallocations/list">
+        <put-attribute name="body" value="/WEB-INF/views/projectallocations/projectallocations.jsp"/>
+    </definition>
+
+	<definition extends="default" name="projectallocations/show">
+        <put-attribute name="body" value="/WEB-INF/views/projectallocations/show.jspx"/>
+    </definition>
+
+	<definition extends="default" name="projectallocations/create">
+        <put-attribute name="body" value="/WEB-INF/views/projectallocations/create.jspx"/>
+    </definition>
+
+	<definition extends="default" name="projectallocations/update">
+        <put-attribute name="body" value="/WEB-INF/views/projectallocations/update.jspx"/>
+    </definition>
+    
+    <definition name="projectallocations/readonlyProjectDetails" template="/WEB-INF/views/projectallocations/readonlyProjectDetails.jsp"></definition>
+  
+   	<definition name="projectallocations/allocationPopup" template="/WEB-INF/views/projectallocations/resourceAllocationPopup.jsp"></definition>
+   
+	<!-- TODO : will be added after 9th August 2017 deployment. -->
+   	<!-- <definition name="projectallocations/releaseFeedbackSummary" template="/WEB-INF/views/projectallocations/releaseFeedbackSummary.jsp"></definition> -->
+   
+   	<definition name="projectallocations/copiedResourceAllocationPopup" template="/WEB-INF/views/projectallocations/copiedResourceAllocationPopup.jsp"></definition>
+
+</tiles-definitions>

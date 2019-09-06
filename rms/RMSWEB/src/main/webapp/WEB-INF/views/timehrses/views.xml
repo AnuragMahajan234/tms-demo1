@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="defaultdashboard" name="timehrses/list">
+        <put-attribute name="body" value="/WEB-INF/views/timehrses/list.jsp"/>
+    </definition>
+    <definition extends="defaultdashboard" name="timehrses/timehrses">
+        <put-attribute name="body" value="/WEB-INF/views/timehrses/timehrses.jsp"/>
+    </definition>
+<definition extends="default" name="timehrses/show">
+        <put-attribute name="body" value="/WEB-INF/views/timehrses/show.jspx"/>
+    </definition>
+<definition extends="default" name="timehrses/create">
+        <put-attribute name="body" value="/WEB-INF/views/timehrses/create.jspx"/>
+    </definition>
+<definition extends="default" name="timehrses/update">
+        <put-attribute name="body" value="/WEB-INF/views/timehrses/update.jspx"/>
+    </definition>
+<definition extends="defaultdashboard" name="timehrses/acknowledge">
+        <put-attribute name="body" value="/WEB-INF/views/timehrses/acknowledge.jsp"/>
+    </definition>
+</tiles-definitions>

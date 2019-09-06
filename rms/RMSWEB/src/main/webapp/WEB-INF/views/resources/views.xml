@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="defaultdashboard" name="resources/list">
+        <put-attribute name="body" value="/WEB-INF/views/resources/list.jsp"/>
+    </definition>
+<definition extends="default" name="resources/show">
+        <put-attribute name="body" value="/WEB-INF/views/resources/show.jspx"/>
+    </definition>
+<definition extends="default" name="resources/create">
+        <put-attribute name="body" value="/WEB-INF/views/resources/create.jspx"/>
+    </definition>
+<definition extends="default" name="resources/update">
+        <put-attribute name="body" value="/WEB-INF/views/resources/update.jspx"/>
+    </definition>
+    
+ <definition extends="default" name="resources/userProfile">
+		<put-attribute name="header" value=""/>
+        <put-attribute name="body" value="/WEB-INF/views/resources/userProfile.jsp"/>
+        <put-attribute name="footer" value=""/>
+</definition> 
+
+    
+ <definition name="resources/userProfile" template="/WEB-INF/views/resources/userProfile.jsp" >
+  </definition>
+  
+  <definition extends="defaultdashboard" name="resources/userProfile">
+		
+		<put-attribute name="body" value="/WEB-INF/views/resources/userProfile.jsp" />
+		
+</definition>
+  
+ <definition extends="default" name="resources/uploadresourceslist">
+        <put-attribute name="body" value="/WEB-INF/views/resources/uploadresourceslist.jsp"/>
+    </definition>
+    
+     <definition extends="default" name="resources/unApprovedUserProfile">
+        <put-attribute name="body" value="/WEB-INF/views/resources/approveProfiles.jsp"/>
+</definition>
+</tiles-definitions>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_yash_rms_domain_Resource" modelAttribute="resource" path="/resources" render="${empty dependencies}" z="28g5r4fIRMIk2onJKfGiVXzqATU=">
+        <field:input field="resumeFileName" id="c_com_yash_rms_domain_Resource_resumeFileName" z="/lwDpEfkiRgTs8F8H+Ck4D45NpQ="/>
+        <field:input field="file" id="c_com_yash_rms_domain_Resource_file" z="7GJtJRVfhh41feW4CKSOV1RGNRM="/>
+        <field:simple field="timehrss" id="c_com_yash_rms_domain_Resource_timehrss" messageCode="entity_reference_not_managed" messageCodeAttribute="Timehrs" z="PlxQbIllSmBUOAnbvNIV1d68YG0="/>
+        <field:simple field="userActivities" id="c_com_yash_rms_domain_Resource_userActivities" messageCode="entity_reference_not_managed" messageCodeAttribute="User Activity" z="0q3IsaMfEHdXccAdt0qCvNba4U0="/>
+        <field:simple field="resourceAllocations" id="c_com_yash_rms_domain_Resource_resourceAllocations" messageCode="entity_reference_not_managed" messageCodeAttribute="Resource Allocation" z="ZJ3PdIVXreIgKuwIYLWzIBuAj+I="/>
+        <field:select field="currentReportingManager" id="c_com_yash_rms_domain_Resource_currentReportingManager" itemValue="employeeId" items="${resources}" path="/resources" z="tqOMPRBOgJ2tbT/EgHTsv/9PVNU="/>
+        <field:simple field="resources" id="c_com_yash_rms_domain_Resource_resources" messageCode="entity_reference_not_managed" messageCodeAttribute="Resource" z="y62VvUdYinKc9QV0xuH8KOb1feQ="/>
+        <field:simple field="resources1" id="c_com_yash_rms_domain_Resource_resources1" messageCode="entity_reference_not_managed" messageCodeAttribute="Resource" z="9xJehee3f7CYKgWsaxaQMuO4Aa4="/>
+        <field:select field="currentReportingManagerTwo" id="c_com_yash_rms_domain_Resource_currentReportingManagerTwo" itemValue="employeeId" items="${resources}" path="/resources" z="D9vWxmEwu8B7bYeGt1g3SoPL3IM="/>
+        <field:textarea field="resume" id="c_com_yash_rms_domain_Resource_resume" z="5ujvPPlmOt1w25yBKXN78IPRMLA="/>
+        <field:input field="totalPlannedHrs" id="c_com_yash_rms_domain_Resource_totalPlannedHrs" validationMessageCode="field_invalid_number" z="2GJ9i5tnDLDpGN9TUSNhCKTuGQA="/>
+        <field:input field="totalReportedHrs" id="c_com_yash_rms_domain_Resource_totalReportedHrs" validationMessageCode="field_invalid_number" z="7RnifwpFg4/Cf0wtC3+Z1r48qq8="/>
+        <field:input field="totalBilledHrs" id="c_com_yash_rms_domain_Resource_totalBilledHrs" validationMessageCode="field_invalid_number" z="56TdyLIeqUkJKMnGv5QwR/BNoKk="/>
+        <field:input field="yashEmpId" id="c_com_yash_rms_domain_Resource_yashEmpId" required="true" z="BMSikAP6Qb6LFrFjjtxvU+kesUA="/>
+        <field:simple field="userNotifications" id="c_com_yash_rms_domain_Resource_userNotifications" messageCode="entity_reference_not_managed" messageCodeAttribute="User Notification" z="1ghdfon1S7YDsyJlUXjE2RcXe0o="/>
+        <field:input field="authorities" id="c_com_yash_rms_domain_Resource_authorities" z="jCHaSx3ThFRQNCdGr/qiYVON+Jk="/>
+        <field:input field="skillsMappingList" id="c_com_yash_rms_domain_Resource_skillsMappingList" z="g+HD49YkhkJxUAD5DyGeIgyyUI0="/>
+        <field:simple field="projects" id="c_com_yash_rms_domain_Resource_projects" messageCode="entity_reference_not_managed" messageCodeAttribute="Project" z="fPaCraYVhSbQi5yvMvFujGhO96E="/>
+        <field:simple field="resourceAllocations1" id="c_com_yash_rms_domain_Resource_resourceAllocations1" messageCode="entity_reference_not_managed" messageCodeAttribute="Resource Allocation" z="mDRq6gFxlptpPgizQmILJ8lFTnw="/>
+        <field:simple field="resourceAllocations2" id="c_com_yash_rms_domain_Resource_resourceAllocations2" messageCode="entity_reference_not_managed" messageCodeAttribute="Resource Allocation" z="QpAt5YJdjIec7A5UZRkhiq9AaaY="/>
+        <field:simple field="skillResourcePrimaries" id="c_com_yash_rms_domain_Resource_skillResourcePrimaries" messageCode="entity_reference_not_managed" messageCodeAttribute="Skill Resource Primary" z="EP24vXbBNUyYfelMl9lCy4Xzuf0="/>
+        <field:simple field="skillResourceSecondaries" id="c_com_yash_rms_domain_Resource_skillResourceSecondaries" messageCode="entity_reference_not_managed" messageCodeAttribute="Skill Resource Secondary" z="sJmif+leanW1rBirSe/TpmxB7H0="/>
+        <field:select field="currentBuId" id="c_com_yash_rms_domain_Resource_currentBuId" itemValue="id" items="${bus}" path="/bus" z="ktM3yGjWmOgtIaHwjOObOqFBauE="/>
+        <field:select field="gradeId" id="c_com_yash_rms_domain_Resource_gradeId" itemValue="id" items="${grades}" path="/grades" z="TFncKEUaAXIrK88j2h4he6CGKsM="/>
+        <field:select field="currentProjectId" id="c_com_yash_rms_domain_Resource_currentProjectId" itemValue="id" items="${projects}" path="/projects" z="lS4uDoMmC/fornfkuCt+pwOZcOM="/>
+        <field:select field="visaId" id="c_com_yash_rms_domain_Resource_visaId" itemValue="id" items="${visas}" path="/visas" z="RBiGPXM+OD5tV1B416C1aLzxQAo="/>
+        <field:select field="buId" id="c_com_yash_rms_domain_Resource_buId" itemValue="id" items="${bus}" path="/bus" z="zif+9CkU+vzWo4OFB6lthCVinzY="/>
+        <field:select field="locationId" id="c_com_yash_rms_domain_Resource_locationId" itemValue="id" items="${locations}" path="/locations" z="5IZYc11wScA3il3/GI7Mb+a7OTA="/>
+        <field:select field="ownership" id="c_com_yash_rms_domain_Resource_ownership" itemValue="id" items="${ownerships}" path="/ownerships" z="1JiPd/IGaCfGxYTzhHJ+FzT7E5E="/>
+        <field:select field="deploymentLocation" id="c_com_yash_rms_domain_Resource_deploymentLocation" itemValue="id" items="${locations}" path="/locations" z="NACQweIY2J7JdA1Cq6kMujHj9pU="/>
+        <field:select field="designationId" id="c_com_yash_rms_domain_Resource_designationId" itemValue="id" items="${designationses}" path="/designationses" z="Hu9oqds9ic8xxf/iyMzl0rf6rDg="/>
+        <field:input field="actualCapacity" id="c_com_yash_rms_domain_Resource_actualCapacity" required="true" validationMessageCode="field_invalid_integer" z="0nWNaupDcbY+GElXOeOdlTd+GMQ="/>
+        <field:input field="awardRecognition" id="c_com_yash_rms_domain_Resource_awardRecognition" z="9U7M9AiJmvcgODrqk29JX8gjdRQ="/>
+        <field:datetime dateTimePattern="${resource_confirmationdate_date_format}" field="confirmationDate" id="c_com_yash_rms_domain_Resource_confirmationDate" z="YSiyrLz5L/kyWB3Xwxcy1roWFaE="/>
+        <field:input field="contactNumber" id="c_com_yash_rms_domain_Resource_contactNumber" z="QiWyy/8jeRcnDyhhjWiSxdCT7SI="/>
+        <field:input field="contactNumberThree" id="c_com_yash_rms_domain_Resource_contactNumberThree" z="YOtPDcwFKWVrGo3tFkSpF2mAftI="/>
+        <field:input field="contactNumberTwo" id="c_com_yash_rms_domain_Resource_contactNumberTwo" z="fd/kNHuW1dxX9cUZEMyPD806jSI="/>
+        <field:input field="customerIdDetail" id="c_com_yash_rms_domain_Resource_customerIdDetail" z="uNcbj0bp+DkedCOyvsFnYWgCNZM="/>
+        <field:datetime dateTimePattern="${resource_dateofjoining_date_format}" field="dateOfJoining" id="c_com_yash_rms_domain_Resource_dateOfJoining" required="true" z="P8UeNBom2NrJelycSKl9zU/niRg="/>
+        <field:input field="emailId" id="c_com_yash_rms_domain_Resource_emailId" required="true" validationMessageCode="field_invalid_email" z="Fi8XGp210tTtfl7UW7VUH0yxEXU="/>
+        <field:datetime dateTimePattern="${resource_lastappraisal_date_format}" field="lastAppraisal" id="c_com_yash_rms_domain_Resource_lastAppraisal" z="4AMvd71G5GOZTetuXAeAbikUAs4="/>
+        <field:datetime dateTimePattern="${resource_penultimateappraisal_date_format}" field="penultimateAppraisal" id="c_com_yash_rms_domain_Resource_penultimateAppraisal" z="PbK+rwV7+r7MPfn4tHIv04KFAEQ="/>
+        <field:input field="plannedCapacity" id="c_com_yash_rms_domain_Resource_plannedCapacity" required="true" validationMessageCode="field_invalid_integer" z="4lfeQKqxE3IgSHLYSb7VXP2AqWI="/>
+        <field:input field="profitCentre" id="c_com_yash_rms_domain_Resource_profitCentre" z="lh5Y2/ygMFe9bmnmf75LdJq5wtg="/>
+        <field:datetime dateTimePattern="${resource_releasedate_date_format}" field="releaseDate" id="c_com_yash_rms_domain_Resource_releaseDate" z="CYNESxoNLrkUKinRM432Pga8h74="/>
+        <field:datetime dateTimePattern="${resource_transferdate_date_format}" field="transferDate" id="c_com_yash_rms_domain_Resource_transferDate" z="r97f2ByfvuNpaLe8CxjweJ7wOIo="/>
+        <field:datetime dateTimePattern="${resource_visavalid_date_format}" field="visaValid" id="c_com_yash_rms_domain_Resource_visaValid" z="tRoMUmcLTp0wn9XTj6z43cS3RIU="/>
+        <field:input field="userRole" id="c_com_yash_rms_domain_Resource_userRole" z="9/XouOru+lX0iMeVDOXBFC7CFhE="/>
+        <field:input field="userName" id="c_com_yash_rms_domain_Resource_userName" z="X9OKmIKQjf04DDoABtcgoQfcXsA="/>
+        <field:input field="firstName" id="c_com_yash_rms_domain_Resource_firstName" required="true" z="0VWrgcC3/viilMrqR9PH20Vk2aM="/>
+        <field:input field="lastName" id="c_com_yash_rms_domain_Resource_lastName" required="true" z="ZSdH/PZatE6FZmvWUSgLDhNRQA8="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_yash_rms_domain_Resource" render="${not empty dependencies}" z="or2Rdg0bxsUYucv0GaU2OcghO20="/>
+</div>

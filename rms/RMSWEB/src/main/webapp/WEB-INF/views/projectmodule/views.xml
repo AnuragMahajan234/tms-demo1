@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition extends="defaultdashboard" name="projectmodule/projectmodules">
+		<put-attribute name="body"
+			value="/WEB-INF/views/projectmodule/projectmodules.jsp" />
+	</definition>
+	<definition extends="default" name="projects/updatedlist">
+		<put-attribute name="body"
+			value="/WEB-INF/views/projectactivitys/update.jspx" />
+	</definition>
+	<definition name="projectmodule/custommodulelist"
+		template="/WEB-INF/views/projectmodule/custommodule.jsp">
+	</definition>
+	<definition extends="defaultdashboard" name="projectSubmodule/ProjectSubModules">
+		<put-attribute name="body"
+			value="/WEB-INF/views/projectmodule/ProjectSubModules.jsp" />
+	</definition>
+		<definition name="projectSubmodule/CustomProjectSubModule"
+		template="/WEB-INF/views/projectmodule/CustomProjectSubModule.jsp">
+	</definition>
+</tiles-definitions>

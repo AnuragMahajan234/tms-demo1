@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+<!-- 	<definition extends="default" name="dashboard/list">
+        <put-attribute name="body" value="/WEB-INF/views/dashboard/list.jsp"/>
+    </definition> -->
+    
+     <!-- <definition name="dashboard/list" template="/WEB-INF/views/dashboard/list.jsp">
+        <put-attribute name="body" value=""/>
+    </definition> -->
+    
+    <definition extends="defaultdashboard" name="dashboard/list">
+        <put-attribute name="body" value="/WEB-INF/views/dashboard/list.jsp"/>
+    </definition>
+    
+   <!--   <definition name="dashboard/dashboard" template="/WEB-INF/views/dashboard/list.jsp">
+        <put-attribute name="body" value=""/>
+    </definition> -->
+    
+     <definition extends="defaultdashboard" name="dashboard/dashboard">
+        <put-attribute name="body" value="/WEB-INF/views/dashboard/dashboard.jsp"/>
+    </definition>
+</tiles-definitions>

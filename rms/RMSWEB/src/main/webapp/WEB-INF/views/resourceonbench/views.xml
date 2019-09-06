@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="defaultdashboard" name="resourceonbench/list">
+        <put-attribute name="body" value="/WEB-INF/views/resourceonbench/resourceOnBench.jsp"/>
+    </definition>
+<definition extends="default" name="resourceonbench/show">
+        <put-attribute name="body" value="/WEB-INF/views/resourceonbench/show.jspx"/>
+    </definition>
+<definition extends="default" name="resourceonbench/create">
+        <put-attribute name="body" value="/WEB-INF/views/resourceonbench/create.jspx"/>
+    </definition>
+<definition extends="default" name="resourceonbench/update">
+        <put-attribute name="body" value="/WEB-INF/views/resourceonbench/update.jspx"/>
+    </definition>
+     <definition name="resourceonbench/readonlyEmployeeDetails" template="/WEB-INF/views/resourceonbench/readonlyEmployeeDetails.jsp" >
+  </definition>
+</tiles-definitions>

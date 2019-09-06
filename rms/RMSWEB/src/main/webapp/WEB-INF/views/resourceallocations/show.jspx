@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_yash_rms_domain_ResourceAllocation" object="${resourceallocation}" path="/resourceallocations" z="aP4hkXrIct28ww7l2/uS9YREpkI=">
+        <field:display field="projectId" id="s_com_yash_rms_domain_ResourceAllocation_projectId" object="${resourceallocation}" z="pO+GGoat9Je/8TM1YC4lPEra1Zk="/>
+        <field:display field="employeeId" id="s_com_yash_rms_domain_ResourceAllocation_employeeId" object="${resourceallocation}" z="jS8K4/F3DO252qKfuYuDgYntu/0="/>
+        <field:display field="allocationSeq" id="s_com_yash_rms_domain_ResourceAllocation_allocationSeq" object="${resourceallocation}" z="NDtnOzuIyG/OwCPOU1Thij6O0Yk="/>
+        <field:display date="true" dateTimePattern="${resourceAllocation_allocstartdate_date_format}" field="allocStartDate" id="s_com_yash_rms_domain_ResourceAllocation_allocStartDate" object="${resourceallocation}" z="Cqo44+pPxlbb40ArCxy9yJmUoBQ="/>
+        <field:display date="true" dateTimePattern="${resourceAllocation_allocenddate_date_format}" field="allocEndDate" id="s_com_yash_rms_domain_ResourceAllocation_allocEndDate" object="${resourceallocation}" z="LFwO6mA+sEapLuww6IaKFNn39d8="/>
+        <field:display field="allocBlock" id="s_com_yash_rms_domain_ResourceAllocation_allocBlock" object="${resourceallocation}" z="1PVdbZLDcns1KsnGdCvDINM7wtg="/>
+        <field:display field="allocRemarks" id="s_com_yash_rms_domain_ResourceAllocation_allocRemarks" object="${resourceallocation}" z="uS2864Cgy73Vp4/szzT6pyClYtk="/>
+        <field:display field="curProj" id="s_com_yash_rms_domain_ResourceAllocation_curProj" object="${resourceallocation}" z="p/Tk/zOuVHsA57yGR8LhVOjnDps="/>
+        <field:display field="billable" id="s_com_yash_rms_domain_ResourceAllocation_billable" object="${resourceallocation}" z="uzuscSJpdz+SAwaRhvyqcVaa4CY="/>
+        <field:display field="allocHrs" id="s_com_yash_rms_domain_ResourceAllocation_allocHrs" object="${resourceallocation}" z="tf+5cs+zzueYnMAggPbuMsx5jtY="/>
+        <field:display field="rateId" id="s_com_yash_rms_domain_ResourceAllocation_rateId" object="${resourceallocation}" z="cFMOOPFRjUaexfLqKzoM+73TuiA="/>
+        <field:display field="allocationTypeId" id="s_com_yash_rms_domain_ResourceAllocation_allocationTypeId" object="${resourceallocation}" z="jkh5cKtMXs196NC4qsToyS33rn4="/>
+        <field:display field="ownershipId" id="s_com_yash_rms_domain_ResourceAllocation_ownershipId" object="${resourceallocation}" z="LdlEGCrpu03cwa3eX2O6IENO9s8="/>
+        <field:display field="allocatedBy" id="s_com_yash_rms_domain_ResourceAllocation_allocatedBy" object="${resourceallocation}" z="eTtB9nbWU7JDCxINo1QfgYUkU3M="/>
+        <field:display field="updatedBy" id="s_com_yash_rms_domain_ResourceAllocation_updatedBy" object="${resourceallocation}" z="PYbL67ULSTl6mAHvdq5TdPoZQWk="/>
+    </page:show>
+</div>

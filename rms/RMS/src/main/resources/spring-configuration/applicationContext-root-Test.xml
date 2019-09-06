@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" 
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jms="http://www.springframework.org/schema/jms" 
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.2.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-4.2.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+	<context:property-placeholder properties-ref="environmentSpecificParam" ignore-unresolvable="true"/>
+	
+	<util:properties id="environmentSpecificParam">
+		<prop key="rms.domainName">yash.com</prop>
+		<prop key="rms.serverName">inidradc01</prop>
+	</util:properties>
+	
+<!-- 	<bean id="propertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+        p:location="/spring-configuration/persistence-mysql.properties" /> -->
+          <tx:annotation-driven/>
+        <context:property-placeholder location="classpath*:/spring-configuration/*.properties"/>
+     <bean id="contextApplicationContextProvider" class="org.yash.rms.util.ApplicationContextProvider"></bean>
+
+<!--     <bean id="sessionFactory"  
+     class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">  
+       <property name="dataSource" ref="dataSource" />  
+       <property name="packagesToScan" value="org.yash.rms" />  
+       <property name="hibernateProperties">  
+          <props>  
+             <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>  
+             <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+             <prop key="hibernate.archive.autodetection">class</prop>
+             <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+             <prop key="hibernate.lazy">true</prop>
+          </props>  
+       </property>  
+    </bean>   -->
+
+<!-- <bean class="org.apache.tomcat.jdbc.pool.DataSource" name="dataSource">
+
+<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+<property name="url" value="jdbc:mysql://localhost:3306/rms_prod_4.0?zeroDateTimeBehavior=convertToNull"/>
+
+<property name="username" value="root"/>
+
+<property name="password" value="root"/>
+
+<property name="initialSize" value="5"/>
+
+<property name="maxActive" value="120"/>
+
+<property name="maxIdle" value="5"/>
+
+</bean>-->
+ 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    	<!-- <property name="jndiName" value="java:comp/env/jdbc/rms"/> -->
+    	<property name="jndiName" value="java:comp/env/jdbc/rms"/>
+	</bean>
+
+<bean id="wrappedDBDataSource" class="net.bull.javamelody.SpringDataSourceFactoryBean" primary="true">
+		<property name="targetName" value="dataSource" />
+</bean>
+ 
+ <!--    <bean id="txManager"  
+     class="org.springframework.orm.hibernate5.HibernateTransactionManager">  
+       <property name="sessionFactory" ref="sessionFactory" />  
+    </bean>   -->
+   
+    	<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" id="jpaVendorAdapter">
+<property name="showSql" value="false"/>
+</bean>
+	<bean id="entityManagerFactory"
+	class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	<property name="persistenceUnitName" value="mysql"/>
+	<property name="dataSource" ref="dataSource" />
+ <property name="persistenceXmlLocation" value="classpath:/META-INF/persistence.xml"/>
+<property name="packagesToScan" value="org.yash"/>
+<property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
+ <property name="jpaProperties">
+      <props>
+        <prop key="hibernate.lazy">true</prop>
+        <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+      </props>
+      </property>  
+	</bean>
+	<bean class="org.springframework.orm.jpa.JpaTransactionManager" name="transactionManager" id="txManager2">
+<property name="entityManagerFactory" ref="entityManagerFactory"/>
+</bean>
+   
+ 
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+    <bean id="hibernateExceptionTranslator" class="org.springframework.orm.hibernate5.HibernateExceptionTranslator"/>
+
+ 
+     <bean id="resumeUploadPath" class="org.yash.rms.helper.ResourceResumeHelper">
+     <property name="uploadPath" value="${RESUME_UPLOAD_SOURCE_PATH_LOCAL}"></property>
+     </bean>
+     
+	<import resource="common-beans.xml" />
+	<import resource="quartz-schedular.xml" />
+	
+	<!-- Below import used to schedule the job task according to time expressed by cron expression-->
+	
+	
+	
+</beans>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_yash_rms_domain_Resource" object="${resource}" path="/resources" z="0kJzrYwwapAMFPAYEUWIb1PIyQs=">
+        <field:display field="resumeFileName" id="s_com_yash_rms_domain_Resource_resumeFileName" object="${resource}" z="P/LyV2S7aM1K86Ycf8u0NrYHpGA="/>
+        <field:display field="file" id="s_com_yash_rms_domain_Resource_file" object="${resource}" z="M/6tHB6EAt0NVzU1htVZnQa4H/g="/>
+        <field:display field="currentReportingManager" id="s_com_yash_rms_domain_Resource_currentReportingManager" object="${resource}" z="PidgtqR+dih1F0iFuvdla7/LHoU="/>
+        <field:display field="currentReportingManagerTwo" id="s_com_yash_rms_domain_Resource_currentReportingManagerTwo" object="${resource}" z="nh8xBidz9dbBLFMQzz7vTUGXH6k="/>
+        <field:display field="resume" id="s_com_yash_rms_domain_Resource_resume" object="${resource}" z="2J+x/6UxvsqSUjIDenGlreLeX8Q="/>
+        <field:display field="totalPlannedHrs" id="s_com_yash_rms_domain_Resource_totalPlannedHrs" object="${resource}" z="LTqqHPL0YFlnG+2mMm7L6ybJwAU="/>
+        <field:display field="totalReportedHrs" id="s_com_yash_rms_domain_Resource_totalReportedHrs" object="${resource}" z="1hBb7vQ6SE/lvr6uLgUR3DzlxKs="/>
+        <field:display field="totalBilledHrs" id="s_com_yash_rms_domain_Resource_totalBilledHrs" object="${resource}" z="yr6b7QjS7igrq3asK7RNrA/SrtE="/>
+        <field:display field="yashEmpId" id="s_com_yash_rms_domain_Resource_yashEmpId" object="${resource}" z="UHiOAymoEV6EQ811X4ZDKYwP7Ps="/>
+        <field:display field="authorities" id="s_com_yash_rms_domain_Resource_authorities" object="${resource}" z="WNlthd3+lONQyWZMQMl2/AT8xpU="/>
+        <field:display field="skillsMappingList" id="s_com_yash_rms_domain_Resource_skillsMappingList" object="${resource}" z="RnxaVd0yRIxdqUhGtSUoXHGLAnI="/>
+        <field:display field="currentBuId" id="s_com_yash_rms_domain_Resource_currentBuId" object="${resource}" z="qOVtFwEeyoN/qM+YQST/XGJGT8g="/>
+        <field:display field="gradeId" id="s_com_yash_rms_domain_Resource_gradeId" object="${resource}" z="nnmk6m0eJI1m5c4OkZwjPBNECdo="/>
+        <field:display field="currentProjectId" id="s_com_yash_rms_domain_Resource_currentProjectId" object="${resource}" z="sfBtmq5zS6QqwODsMFInoHcAuxU="/>
+        <field:display field="visaId" id="s_com_yash_rms_domain_Resource_visaId" object="${resource}" z="EJ2ZAcaUENl8ko/p06q0fDb1p64="/>
+        <field:display field="buId" id="s_com_yash_rms_domain_Resource_buId" object="${resource}" z="pnCWZTOHXbaoMVXwNq7rgrVWDMc="/>
+        <field:display field="locationId" id="s_com_yash_rms_domain_Resource_locationId" object="${resource}" z="jaihE7rHCVwcERb63Othrzm7hQ4="/>
+        <field:display field="ownership" id="s_com_yash_rms_domain_Resource_ownership" object="${resource}" z="wsv+nWaNTvjjVcATJYBhcBg+fwI="/>
+        <field:display field="deploymentLocation" id="s_com_yash_rms_domain_Resource_deploymentLocation" object="${resource}" z="y3LP4l1TAl8hz9zDucXxuLbMEHc="/>
+        <field:display field="designationId" id="s_com_yash_rms_domain_Resource_designationId" object="${resource}" z="DeLsF78WQNrRrFzOssAY4AAE+4M="/>
+        <field:display field="actualCapacity" id="s_com_yash_rms_domain_Resource_actualCapacity" object="${resource}" z="XGBn6soo2Lsbil1i9+W20EUpjlI="/>
+        <field:display field="awardRecognition" id="s_com_yash_rms_domain_Resource_awardRecognition" object="${resource}" z="VqnU76LUxRJIICrSCxEsnKwkpQY="/>
+        <field:display date="true" dateTimePattern="${resource_confirmationdate_date_format}" field="confirmationDate" id="s_com_yash_rms_domain_Resource_confirmationDate" object="${resource}" z="iKH3UOhTPLGXHGZDLY288o3x9qE="/>
+        <field:display field="contactNumber" id="s_com_yash_rms_domain_Resource_contactNumber" object="${resource}" z="OjvyKK0jdRbZCY1ZYiOurGFYmuI="/>
+        <field:display field="contactNumberThree" id="s_com_yash_rms_domain_Resource_contactNumberThree" object="${resource}" z="mNa7w37hR9GXLKIeLXW9uXh8Kao="/>
+        <field:display field="contactNumberTwo" id="s_com_yash_rms_domain_Resource_contactNumberTwo" object="${resource}" z="jt0rr4NkgBPsA6AFtvtMbqYSGz0="/>
+        <field:display field="customerIdDetail" id="s_com_yash_rms_domain_Resource_customerIdDetail" object="${resource}" z="iWSME/Ns0PfA2ssT6TxPeU11AtE="/>
+        <field:display date="true" dateTimePattern="${resource_dateofjoining_date_format}" field="dateOfJoining" id="s_com_yash_rms_domain_Resource_dateOfJoining" object="${resource}" z="GoPh9eu5z/uLJVlcn4g3hufsPaE="/>
+        <field:display field="emailId" id="s_com_yash_rms_domain_Resource_emailId" object="${resource}" z="V1/v3pHI068HntQ2ul+ZrqfdXKQ="/>
+        <field:display date="true" dateTimePattern="${resource_lastappraisal_date_format}" field="lastAppraisal" id="s_com_yash_rms_domain_Resource_lastAppraisal" object="${resource}" z="gstSAWPKjogo44YtdKV4CdSshyA="/>
+        <field:display date="true" dateTimePattern="${resource_penultimateappraisal_date_format}" field="penultimateAppraisal" id="s_com_yash_rms_domain_Resource_penultimateAppraisal" object="${resource}" z="9n4kjtnpm/70b9k3heU3aFtKMVQ="/>
+        <field:display field="plannedCapacity" id="s_com_yash_rms_domain_Resource_plannedCapacity" object="${resource}" z="i7y9vwfZytuz2IQbNsRqAFKlBHA="/>
+        <field:display field="profitCentre" id="s_com_yash_rms_domain_Resource_profitCentre" object="${resource}" z="6PHtQ0NUzPWwr1ghmDC7wmVCb2w="/>
+        <field:display date="true" dateTimePattern="${resource_releasedate_date_format}" field="releaseDate" id="s_com_yash_rms_domain_Resource_releaseDate" object="${resource}" z="jfnz6Z8zcmU+OXsDRwDvCnFx8NU="/>
+        <field:display date="true" dateTimePattern="${resource_transferdate_date_format}" field="transferDate" id="s_com_yash_rms_domain_Resource_transferDate" object="${resource}" z="521vvlbN6Y4TO/JYIom/ARIXg5s="/>
+        <field:display date="true" dateTimePattern="${resource_visavalid_date_format}" field="visaValid" id="s_com_yash_rms_domain_Resource_visaValid" object="${resource}" z="gzxL8g7QeV2am/SZ71VE6BlKJAo="/>
+        <field:display field="userRole" id="s_com_yash_rms_domain_Resource_userRole" object="${resource}" z="7IYLiQElJT4fhrL6yKG+ER//rKE="/>
+        <field:display field="userName" id="s_com_yash_rms_domain_Resource_userName" object="${resource}" z="CKYm5pJKQzrXjGLMbWoXlKMgveA="/>
+        <field:display field="firstName" id="s_com_yash_rms_domain_Resource_firstName" object="${resource}" z="O74UXxOHjrGWJVxK/GkmuN1miU8="/>
+        <field:display field="lastName" id="s_com_yash_rms_domain_Resource_lastName" object="${resource}" z="VT7VQUAvs8lJHbusnfYb7WLGd7w="/>
+    </page:show>
+</div>

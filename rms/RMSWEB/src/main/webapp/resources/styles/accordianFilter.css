@@ -1,0 +1,245 @@
+.searchInp
+{
+	width:100% !important;
+}
+.chk {
+	float:left;
+	height:13px;
+	outline:none;
+	width: auto !important;
+}
+.box {
+	border:1px solid #cacaca;
+	border-top:none;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	height:170px;
+	padding:3px 5px;
+	margin:0px;
+}
+input.selectarea {
+	color: #737373;
+	font-family: verdana;
+	font-size:12px;
+	padding:3px 0px 3px 0px !important;
+	width:100% !important;
+ 	*width:100% !important;
+	border:solid 1px #cacaca;
+	float:left;
+}
+.search_box_bg {
+	width:134px;
+	height:20px;
+	background:url(../images/search-box-bg.png) no-repeat left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#747474;
+	padding:5px;
+}
+.text_field_cancel_button {
+	position: relative;
+}
+.searchClearIcon
+{
+	position: absolute;right: -3px;top:3px;
+}
+#popUp_div {
+	opacity:0.5;
+	filter: alpha(opacity=50);
+	background:#ccc;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:9;
+	top:0px;
+	display:none;
+}
+#assign_popUp {
+	width:400px;
+	border:solid 1px #CCC;
+	padding:1px;
+	background:#fff;
+	position:absolute;
+	z-index:9;
+	left:50%;
+	margin-left:-200px;
+	top:50%;
+	margin-top:-170px;
+	display:none;
+}
+.closeAccordianPopUp {
+	position:absolute;
+	top:0px;
+	right:5px;
+	cursor:pointer;
+	background:url(../images/cross_icon.png) no-repeat center 6px;
+	width:27px;
+	height:26px;
+}
+.closeAccordianPopUp:hover {
+	background-position:center -21px;
+}
+.product {
+	color:#353535;
+	padding:0 0 0 5px;
+	float:left;
+	min-width: 85px;
+}
+.product-list {
+
+}
+.product-list ul {
+	list-style:none;
+	margin:5px 0 0 0;
+}
+.product-list ul li {
+	display:block;
+	background:none;
+	padding:0 5px;
+	width:100%;
+	border:none;
+	margin-bottom:10px;
+}
+.selected_list {
+	float:left;
+	height:auto;
+	padding-left:15px;
+}
+.selected_list ul {
+	list-style:none;
+	margin:5px 0 0 0;
+}
+.selected_list ul li {
+	display:inline-block;
+	background:none;
+	margin:0 0 5px;
+	width:100%;
+	border:none;
+}
+a.linkBtn:link, a.linkBtn:active, a.linkBtn:visited {
+	color: #006600;
+	font-weight: bold;
+	line-height: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align:right;
+}
+a.linkBtn:hover
+{
+	text-decoration:underline;
+}
+h3 {
+	color: #006600;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 2px;
+	text-transform: uppercase;
+}
+.search_list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.search_list li {
+	margin: 0;
+	background: url(../images/message-bar.gif) repeat-x;
+	border:solid 1px #cacaca;
+	border-top:none;
+}
+.search_list li.first {
+	border:solid 1px #cacaca !important;
+}
+.search_head {
+	padding: 5px 3px 5px 11px;
+	float:left;
+	position: relative;
+	min-width:200px;
+}
+.search_body {
+	padding: 0px 10px 15px;
+}
+.deactiveIcon {
+	width:16px;
+	height:16px;
+	background:url(../images/plus.png) right no-repeat;
+	float:right;
+	cursor: pointer;
+	margin: 4px 3px 0 0;
+}
+.activeIcon {
+	background:url(../images/minus.png) right no-repeat;
+	width:16px;
+	height:16px;
+	text-align:right;
+	float:right;
+	cursor: pointer;
+	margin: 4px 3px 0 0;
+}
+.ent_pagetitle1black17px {
+	color: #006600;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 2px;
+	text-transform: uppercase;
+	border-bottom:dotted 1px #999;
+	margin-bottom:10px;
+}
+.ent_pagetitle1black15px {
+	color: #006600;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 2px;
+	text-transform: uppercase;
+	border-bottom:dotted 1px #999;
+	margin-bottom:10px;
+}
+A.Btn:link {
+	border:1px solid #ccc;
+	line-height:18px;
+	padding:6px;
+	font-weight:bold;
+	background: #666;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase
+}
+A.Btn:visited {
+	border:1px solid #ccc;
+	line-height:18px;
+	padding:6px;
+	font-size:10px;
+	font-weight:bold;
+	background: #666;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase
+}
+A.Btn:hover {
+	border:1px solid #ccc;
+	line-height:18px;
+	padding:6px;
+	font-size:10px;
+	font-weight:bold;
+	background: #666;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase
+}
+A.Btn:active {
+	border:1px solid #ccc;
+	line-height:18px;
+	padding:6px;
+	font-size:10px;
+	font-weight:bold;
+	background: #666;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase
+}
+.filter_selected {
+	float:right;
+	margin:6px 13px 0 0;
+}

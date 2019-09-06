@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_yash_rms_domain_Allocationtype" items="${allocationtypes}" z="zBG17XeohEz1RWNhY6hVtukYBjI=">
+        <table:table data="${allocationtypes}" id="l_com_yash_rms_domain_Allocationtype" path="/allocationtypes" z="dMO086bKsM4TMmAKOBVqwfgt4+g=">
+            <table:column id="c_com_yash_rms_domain_Allocationtype_allocationtype" property="allocationtype" z="S6/KbTcMULRDWRcAbKjHvgxpPc0="/>
+            <table:column id="c_com_yash_rms_domain_Allocationtype_isDefault" property="isDefault" z="dGyVRHVPNjWz1aUbKvXynNyRpUI="/>
+        </table:table>
+    </page:list>
+</div>

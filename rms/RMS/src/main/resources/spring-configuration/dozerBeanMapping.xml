@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping>
+		<class-a>org.yash.rms.form.NewEmployee</class-a>
+		<class-b>org.yash.rms.domain.Resource</class-b>
+		<field-exclude>
+			<a>file</a>
+			<b>file</b>
+		</field-exclude>
+	</mapping>
+
+	<mapping>
+		<class-a>org.yash.rms.domain.UserActivity</class-a>
+		<class-b>org.yash.rms.form.TimeSheet</class-b>
+		<field>
+			<a>activityId.id</a>
+			<b>activityId</b>
+		</field>
+		<field>
+			<a>resourceAllocId.id</a>
+			<b>resourceAllocId</b>
+		</field>
+
+	</mapping>
+
+
+
+
+</mappings>

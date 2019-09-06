@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_yash_rms_domain_Project" items="${projects}" z="/ij9Qzbgkdu54mSFV9bXB2tjegs=">
+        <table:table data="${projects}" id="l_com_yash_rms_domain_Project" path="/projects" z="ke7jeyWyhljJXGA9/JhTsLBxDds=">
+            <table:column id="c_com_yash_rms_domain_Project_customerContacts" property="customerContacts" z="C7s7NACvmefTBxLFMZUp12IqaPY="/>
+            <table:column id="c_com_yash_rms_domain_Project_deere" property="deere" z="745c+iauG3sZiUIh749rt4yrXUY="/>
+            <table:column id="c_com_yash_rms_domain_Project_onsiteDelMgr" property="onsiteDelMgr" z="c0vp1l0Lt+/OqvoaK53BWceCGyk="/>
+            <table:column id="c_com_yash_rms_domain_Project_plannedProjCost" property="plannedProjCost" z="C35KeNshA0Uyh/6so98P0mZHkno="/>
+            <table:column id="c_com_yash_rms_domain_Project_plannedProjSize" property="plannedProjSize" z="x8j68reb5yLPSWGdhAxrSAVm4dU="/>
+            <table:column date="true" dateTimePattern="${project_projectkickoff_date_format}" id="c_com_yash_rms_domain_Project_projectKickOff" property="projectKickOff" z="DkIjtCxdlx5t3EhAbihqyvF+b1s="/>
+        </table:table>
+    </page:list>
+</div>

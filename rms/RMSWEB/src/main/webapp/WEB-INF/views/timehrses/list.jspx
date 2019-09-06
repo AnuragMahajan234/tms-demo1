@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_yash_rms_domain_Timehrs" items="${timehrses}" z="eV3M/5V1QsZXItjJCNr3/JVI0eo=">
+        <table:table data="${timehrses}" id="l_com_yash_rms_domain_Timehrs" path="/timehrses" z="ZL/EkNz2N8r5PrqcSYSix2pTki0=">
+            <table:column id="c_com_yash_rms_domain_Timehrs_resourceId" property="resourceId" z="mt7ZOCjNlSm/M8Cc4aXNShK45lU="/>
+            <table:column id="c_com_yash_rms_domain_Timehrs_approved" property="approved" z="3f//fj417yjQBtuJOP41+aTsRgM="/>
+            <table:column id="c_com_yash_rms_domain_Timehrs_reportedHrs" property="reportedHrs" z="kTn8I3U8xkSo4eRaAyq9Y+gPMxM="/>
+            <table:column id="c_com_yash_rms_domain_Timehrs_resourceAllocId" property="resourceAllocId" z="QIJLt4/0OiSSlRrwWm91IRn/cak="/>
+            <table:column date="true" dateTimePattern="${timehrs_weekendingdate_date_format}" id="c_com_yash_rms_domain_Timehrs_weekEndingDate" property="weekEndingDate" z="uj28koB2cdDUi0WBykHXiAS2At4="/>
+            <table:column id="c_com_yash_rms_domain_Timehrs_plannedHrs" property="plannedHrs" z="xFcI25dICL1GfdkzUMDFg2Nvws0="/>
+        </table:table>
+    </page:list>
+</div>

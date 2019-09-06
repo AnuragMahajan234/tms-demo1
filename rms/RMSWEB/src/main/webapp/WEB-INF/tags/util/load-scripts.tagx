@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+
+  <jsp:output omit-xml-declaration="yes"/>
+
+  <spring:theme code="styleSheet" var="roo_css"/>
+  <spring:url value="/${roo_css}" var="roo_css_url"/>
+  <spring:url value="images/favicon.ico" var="favicon"/>
+
+	<spring:url value="js-framework/jquery-1.7.2.min.js" var="jquery_url"/>
+  <script src="/rms/resources/dashboardscript/plugins/jQuery/jQuery-2.1.4.min.js?ver=2.1.4" type="text/javascript"></script>
+	<spring:url value="js-framework/jquery-ui-1.8.21/jquery-ui-1.8.21.custom.min.js" var="jquery_ui_1_8_21_custom_min_js"/>
+	<spring:url value="js-framework/jquery-ui-1.8.21/combobox.js" var="combobox_js"/>
+
+  <link href="${favicon}" rel="SHORTCUT ICON"/>
+  
+  <link href="${roo_css_url}" media="screen" rel="stylesheet" type="text/css"/>
+
+  
+  <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
+  <c:set var="userLocale">
+    <c:set var="plocale">${pageContext.response.locale}</c:set>
+    <c:out default="en" value="${fn:replace(plocale, '_', '-')}"/>
+  </c:set>
+
+  
+	
+
+	<script src="${jquery_url}" type="text/javascript">
+        <!-- required for FF3 and Opera -->
+    </script>
+    
+    <script src="${jquery_ui_1_8_21_custom_min_js}" type="text/javascript">
+        <!-- required for FF3 and Opera -->
+    </script>
+    
+    <script src="${combobox_js}" type="text/javascript">
+        <!-- required for FF3 and Opera -->
+    </script>
+    
+    
+        
+    
+</jsp:root>

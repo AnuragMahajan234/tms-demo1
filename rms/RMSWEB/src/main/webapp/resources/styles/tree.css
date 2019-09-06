@@ -1,0 +1,74 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+html{
+	padding:0px;
+	margin:0px;
+	font-family:calibri;
+	font-weight:normal;
+	font-size:13px;
+	color:#454545;
+}
+body{
+	padding:0px;
+	margin:0px;
+}
+.positionRel
+{
+	position:relative
+}
+.actionFilteIcon
+{
+	background: url(../images/upIconSmall.png) left -1px no-repeat;
+	height: 13px;
+    position: absolute;
+    right: -4px;
+    top: 20px;
+    width: 55px;
+    z-index: 9999;
+}
+.filterInnerContentDetails{
+	width:150px;
+	background:#F7F7F7;
+	border:1px solid #999;
+	z-index:999;
+	padding:10px;
+	-webkit-box-shadow:  -2px 2px 2px 1px #DDDDDD;
+     box-shadow:  -2px 2px 2px 1px #DDDDDD;
+    -moz-box-shadow:  -2px 2px 1px 1px #DDDDDD;
+	padding-bottom:10px;
+}
+.filterInnerContentDetails ul{
+	padding:0px;
+	margin:0px;
+}
+.filterInnerContentDetails li{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	padding:6px 0px;
+}
+.filterInnerContentDetails li ul{
+	margin-left:20px;
+	margin-top:5px;
+}
+.filterInnerContentDetails li a{
+	font-weight:bold;
+}
+.mrgnRgt
+{
+	margin-right:35px;
+}
+
+.notCheck
+{
+	height: 7px;
+    left: 3px;
+    position: absolute;
+    top: 9px;
+    width: 7px;
+    z-index: 99999;
+	background:url(../images/checkBoxImg.png) no-repeat;
+	display:none;
+}

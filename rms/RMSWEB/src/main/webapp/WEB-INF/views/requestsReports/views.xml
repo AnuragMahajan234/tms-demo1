@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition extends="defaultdashboard" name="requestsReports/RequestResourceDashboard">
+		
+		<put-attribute name="body" value="/WEB-INF/views/requestsReports/RequestResourceDashboard.jsp" />
+		
+	</definition>
+	<definition extends="defaultdashboard" name="requestsReports/AddRemoveResourceToRequisition">
+		
+		<put-attribute name="body" value="/WEB-INF/views/requestsReports/AddRemoveResourceToRequisition.jsp" />
+		
+	</definition>
+	
+	<definition extends="defaultdashboard" name="requestsReports/positionDashboard">
+		<put-attribute name="body" value="/WEB-INF/views/requestsReports/positionDashboard.jsp" />
+	</definition>
+	
+	<!-- Merge RRF  Start -->
+	<definition extends="defaultdashboard" name="requestsReports/mergePositionDashboard">
+		<put-attribute name="body" value="/WEB-INF/views/requestsReports/mergePositionDashboard.jsp" />
+	</definition>
+	<!-- Merge RRF End -->
+	
+</tiles-definitions>
+<!-- <tiles-definitions>
+	<definition extends="defaultdashboard" name="requestsReports/list">
+		
+		<put-attribute name="body" value="/WEB-INF/views/requestsReports/list.jsp" />
+		
+	</definition>
+</tiles-definitions> -->

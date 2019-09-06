@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition extends="defaultdashboard" name="reports/list">
+		<put-attribute name="body" value="/WEB-INF/views/reports/list.jsp" />
+	</definition>
+	<definition name="reports/PLReport" extends="defaultdashboard">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/PLReport.jsp" />
+
+	</definition>
+	<definition extends="defaultdashboard" name="reports/javaReportList">
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/javaReportList.jsp" />
+	</definition>
+
+	<definition extends="defaultdashboard" name="report/RMReport">
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/RMReport.jsp" />
+	</definition>
+
+	<definition extends="defaultdashboard" name="report/MuneerReport">
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/MuneerReport.jsp" />
+	</definition>
+
+	<definition extends="defaultdashboard" name="report/PWRReport">
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/PWRReport.jsp" />
+	</definition>
+
+	<definition extends="defaultdashboard" name="report/ResourceMovementReport">
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/ResourceMovementReport.jsp" />
+	</definition>
+
+	<definition name="reports/TeamReport" extends="defaultdashboard">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/TeamReport.jsp" />
+
+	</definition>
+	
+	<definition name="reports/moduleReport" extends="defaultdashboard">
+
+		<put-attribute name="body" value="/WEB-INF/views/reports/moduleReport.jsp" />
+
+	</definition>
+	
+	<definition name="reports/resourceSummaryReport" extends="defaultdashboard">
+
+		<put-attribute name="body" value="/WEB-INF/views/reports/resourceSummaryReport.jsp"/>
+
+	</definition>
+	
+	<definition name="report/UtilizationReport" extends="defaultdashboard">
+
+		<put-attribute name="body" value="/WEB-INF/views/reports/UtilizationDetailReport.jsp"/>
+
+	</definition>
+	
+	<definition name="report/UtilizationReport/Customized" extends="defaultdashboard">
+
+		<put-attribute name="body" value="/WEB-INF/views/reports/CustomizedUtilizationDetailReport.jsp"/>
+
+	</definition>
+	
+	
+	<definition name="report/CustomizeReport" extends="defaultdashboard">
+
+		<put-attribute name="body" value="/WEB-INF/views/reports/CustomizeReport.jsp"/>
+
+	</definition>
+	<definition name="report/currentWeekAllocationReport" extends="defaultdashboard">
+
+		<put-attribute name="body" value="/WEB-INF/views/reports/currentWeekAllocationReport.jsp"/>
+
+	</definition>
+	<definition name="report/customizedHeaderReport" extends="defaultdashboard">
+
+		<put-attribute name="body" value="/WEB-INF/views/reports/customizedHeaderReport.jsp"/>
+
+	</definition>
+	
+	<definition name="report/requestRequisitionReport" extends="defaultdashboard">
+
+              <put-attribute name="body" value="/WEB-INF/views/reports/RequestRequisitionReport.jsp"/>
+
+       </definition>
+	
+	<definition name="report/timesheetReport" extends="defaultdashboard">
+
+		<put-attribute name="body" value="/WEB-INF/views/reports/timesheetReport.jsp"/>
+
+	</definition>
+	
+	<definition name="report/rmgReport" extends="defaultdashboard">
+
+    		<put-attribute name="body" value="/WEB-INF/views/reports/RMGReport.jsp"/>
+
+	</definition>
+	<definition name="reports/customizedModuleReport" template="/WEB-INF/views/reports/customizedModuleReport.jsp"/>
+	
+	<definition extends="defaultdashboard" name="report/ResourceSkillReport">
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/ResourceSkillReport.jsp" />
+	</definition>
+	
+
+</tiles-definitions>

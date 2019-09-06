@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+ <definition extends="defaultdashboard" name="projectactivity/projectactivities">
+  <put-attribute name="body"
+   value="/WEB-INF/views/projectactivity/projectactivities.jsp" />
+ </definition>
+ <definition extends="default" name="projectactivity/show">
+  <put-attribute name="body"
+   value="/WEB-INF/views/projectactivity/show.jspx" />
+ </definition>
+ <definition extends="default" name="projectactivity/create">
+  <put-attribute name="body"
+   value="/WEB-INF/views/projectactivity/create.jspx" />
+ </definition>
+ <definition extends="default" name="projectactivity/update">
+  <put-attribute name="body"
+   value="/WEB-INF/views/projectactivity/update.jspx" />
+ </definition>
+
+ <definition name="projectactivity/customactivitylist"
+  template="/WEB-INF/views/projectactivity/customactivity.jsp">
+
+ </definition>
+</tiles-definitions>

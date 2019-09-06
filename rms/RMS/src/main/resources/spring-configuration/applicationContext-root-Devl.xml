@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.0.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"		
+		>
+
+	<import resource="common-beans.xml" />
+	
+	<context:property-placeholder properties-ref="environmentSpecificParam" ignore-unresolvable="true"/>
+	
+	<util:properties id="environmentSpecificParam">
+		<prop key="rms.domainName">yash.com</prop>
+		<prop key="rms.serverName">inidradc01</prop>
+		<prop key="datasourceJNDI">DB239DataSource</prop>
+		<prop key="encryptionKey">APS_Key</prop>
+		<prop key="tablePrefix">ADRDNST.</prop>
+		<prop key="apsTablePrefix">ADRDNST.</prop>
+		<prop key="oliTablePrefix">ADRDNST.</prop>
+		<prop key="accountFlexPrefix">ADVACTT.</prop>
+		<prop key="cinfoTablePrefix">ADVFRTT.</prop>
+		<prop key="destinationTablePrefix">ADVDSTT.</prop>
+		<prop key="partsInfoTablePrefix">ADVPRTT.</prop>
+		<prop key="schema">ADRDNST</prop>
+		<prop key="databaseUserId">ADYAP1T</prop>
+		<prop key="databasePassword">@RC4Encoded@241,144,237,153,224,79,154,121</prop>
+		<prop key="APSIMSConnectionFactory">IMS39ConnectionFactory</prop>
+		<prop key="BucketReleaseAuthorizedURL">http://ltalweb3.tal.deere.com:8139/APSProcessWEB/DashBoard?userAction=initializeBucketReleaseQueue</prop>
+		
+		<!-- For ReProcess Queue information is fetched from DY Message Broker Emulator Table  -->
+		<prop key="messageBrokerTablePrefix">ADRDNST.</prop>
+	
+		<!-- Used in the Listener Port test harness to query the listener port status through the IAF WebServiceClient -->
+		<prop key="iafWebserviceUserID">adyap1t</prop>
+		<prop key="iafWebservicePassword">54jkfvl7</prop>
+		
+		<!-- Listener Port JNDI Names; Used by the test harness to monitor their status (testharness-listenerportcomponent-beans.xml) -->
+		<prop key="bucketGroupingLpJndiName">DY.BUCKETGROUPINGLP.DEVL</prop>
+		<prop key="carrierAuditLpJndiName">DY.CARRIERAUDITLP.DEVL</prop>
+		<prop key="carrierOverrideLpJndiName">DY.CARRIEROVERRIDELP.DEVL</prop>
+		<prop key="loadBuildingLpJndiName">DY.LOADBUILDINGLP.DEVL</prop>
+		<prop key="pickMethodLpJndiName">DY.PICKMETHODLP.DEVL</prop>
+		<prop key="pullBatchRequestLpJndiName">DY.PULLBATCHREQUESTLP.DEVL</prop>
+		<prop key="pullOrderRequestLpJndiName">DY.PULLORDERREQUESTLP.DEVL</prop>
+	</util:properties>
+	
+	<context:property-placeholder properties-ref="widgetRegistrationProperties" ignore-unresolvable="true"/>
+	<util:properties id="widgetRegistrationProperties">
+		<prop key="widgetRegistrationDatasourceJNDI">DB239DataSource</prop>
+		<prop key="widgetRegistrationTablePrefix">ADRDNSQ</prop>
+		<prop key="widgetRegistrationSchemaEncryptionKey">APS_Key</prop>
+		<prop key="widgetRegistrationSchema">ADRDNSQ</prop>
+		<prop key="widgetRegistrationDatabaseUserId">ADYAP1T</prop>
+		<prop key="widgetRegistrationDatabasePassword">@RC4Encoded@241,144,237,153,224,79,154,121</prop>
+		<prop key="WR_MAX_DAYS">8</prop>
+	</util:properties>
+	
+	<context:property-placeholder properties-ref="widgetProperties" ignore-unresolvable="true"/>
+	<util:properties id="widgetProperties">
+		<prop key="widgetDatasourceJNDI">DB239DataSource</prop>
+		<prop key="rbacTablePrefix">ADRDNSQ</prop>
+		<prop key="widgetTablePrefix">ADRDNSQ</prop>
+		<prop key="widgetSchemaEncryptionKey">APS_Key</prop>
+		<prop key="widgetSchema">ADRDNSQ</prop>
+		<prop key="widgetDatabaseUserId">ADYAP1T</prop>
+		<prop key="widgetDatabasePassword">@RC4Encoded@241,144,237,153,224,79,154,121</prop>
+		<prop key="UseSQLJ">false</prop>
+		<prop key="ApplicationOID">37</prop>
+	</util:properties>
+	
+	<context:property-placeholder properties-ref="DYPreferencesProperties" ignore-unresolvable="true"/>
+	<util:properties id="DYPreferencesProperties" >
+		<prop key="DYPreferencesDatasourceJNDI">DB239DataSource</prop>
+		<prop key="DYPreferencesTablePrefix">ADRAPST</prop>
+		<prop key="DYPreferencesSchema">ADRAPST</prop>
+		<prop key="DYPreferencesSchemaEncryptionKey">APS_Key</prop>
+		<prop key="DYPreferencesDatabaseUserId">ADYPE1T</prop>
+		<prop key="DYPreferencesDatabasePassword">@RC4Encoded@241,144,237,153,224,79,154,121</prop>
+		<!-- The following properties are for accessing the client application widget registration. -->
+		<prop key="ApplicationOID">37</prop>
+		<prop key="WidgetName">DYPreferences</prop>
+		<prop key="UseLegacy">false</prop>
+		<prop key="PersistenceAPI">JDBC</prop>
+		<prop key="TableName">PREFERENCE_APPOID_37</prop>
+		<prop key="DYPreferencesFilePath">DYPreferences.xml</prop>
+	</util:properties>
+	
+	<context:property-placeholder properties-ref="DYAppPropertyManagerProperties" ignore-unresolvable="true"/>
+	<util:properties id="DYAppPropertyManagerProperties" >
+		<prop key="appPropertyManagerDatasourceJNDI">DB239DataSource</prop>
+		<prop key="appPropertyManagerTablePrefix">ADRDNST</prop>
+		<prop key="appPropertyManagerSchema">ADRDNST</prop>
+		<prop key="appPropertyManagerSchemaEncryptionKey">APS_Key</prop>
+		<prop key="appPropertyManagerDatabaseUserId">ADYAP1T</prop>
+		<prop key="appPropertyManagerDatabasePassword">@RC4Encoded@241,144,237,153,224,79,154,121</prop>
+		<prop key="appPropertyManagerEncryptionKey">APS_Key</prop>
+		<!-- The following properties are for accessing the client application properties. -->
+		<prop key="appPropertyManagerApplicationName">APS</prop>
+		<prop key="appPropertyManagerEnvironmentName">DEVL</prop>
+		<prop key="appPropertyManagerComponentName"></prop>
+		<!-- The following properties are for accessing the client application widget registration. -->
+		<prop key="ApplicationOID">37</prop>
+		<prop key="WidgetName">AppPropertyManager</prop>
+		<!-- The following property should be false for JDBC version and true for SQLJ version -->
+		<prop key="EnableSQLJ">false</prop>		
+	</util:properties>
+	
+	<!--  For Message Handler  -->
+	<context:property-placeholder properties-ref="DYMessageHandlerProperties" ignore-unresolvable="true"/>
+	<util:properties id="DYMessageHandlerProperties">
+		<prop key="DYMessageHandlerDatasourceJNDI">DB239DataSource</prop>
+		<prop key="DYMessageHandlerTablePrefix">ADRDNST</prop>
+		<prop key="DYMessageHandlerSchema">ADRDNST</prop>
+		<prop key="DYMessageHandlerEncryptionKey">APS_Key</prop>
+		<prop key="DYMessageHandlerDatabaseUserId">ADYAP1T</prop>
+		<prop key="DYMessageHandlerDatabasePassword">@RC4Encoded@241,144,237,153,224,79,154,121</prop>
+		<prop key="DYMessageHandlerTableName">MSG_BRKR_EMUL</prop>
+		<prop key="ccsidEncoding">819</prop>
+		<prop key="legacyProtectionForMissingMqDbRows">true</prop>
+
+	</util:properties>	
+	<!--  beans specific for local environment -->
+	<context:property-placeholder properties-ref="SQLJAnalyzerProperties" ignore-unresolvable="true"/>
+	<util:properties id="SQLJAnalyzerProperties">
+		<prop key="SQLJAnalyzerDatasourceJNDI">DB239DataSource</prop>
+		<prop key="SQLJAnalyzerEncryptionKey">APS_Key</prop>
+		<prop key="SQLJAnalyzerDatabaseUserId">ADYAP1T</prop>
+		<prop key="SQLJAnalyzerDatabasePassword">@RC4Encoded@241,144,237,153,224,79,154,121</prop>
+		<prop key="AllowInternalXMLLookup">true</prop>
+		<prop key="SQLJPackageListXmlName">SQLJPackageListFinal.xml</prop>
+		<prop key="SQLJPackageListXmlPath">sqlj-configuration</prop>
+		<prop key="EnvironmentNameList">DEVL</prop>
+		<prop key="EnvironmentValueList">DEVL</prop>
+	</util:properties>
+	
+	<context:property-placeholder properties-ref="fedExProperties"  ignore-unresolvable="true"/>
+	<util:properties id="fedExProperties">
+		<prop key="FedExServiceEndPoint">https://wsbeta.fedex.com:443/web-services</prop> 
+		<prop key="FedExServiceKey">zpH5OYQbT3UnJ5u5</prop>
+		<prop key="FedExServiceMeterNumber">118563713</prop>
+		<prop key="FedExServiceAccountNumber">510087461</prop>
+		<prop key="FedExServicePassword">oTMDIk0yF9xUSn3dsDWvMpPOa</prop>
+	</util:properties>
+
+    <bean id="MasterControllerTestExecutorService" class="com.deere.dy.parts.aps.process.executors.MasterControllerTestExecutorService" init-method="initialize" />
+	
+	<!-- URL Holder to capture different URLs called from Java -->
+	<bean id="urlHolder" class="com.deere.dy.parts.aps.utility.UrlHolder">
+		<property name="cacheRefreshUrlList">
+			<list>
+			     <value>http://ltalweb2.tal.deere.com:8149/aps/ProcessRequestHandler?userAction=clearCache</value>
+			     <value>http://ltalweb3.tal.deere.com:8139/aps/ProcessRequestHandler?userAction=clearCache</value>
+			     <!-- Entry for newly introduce JVM's -->
+			      <value>http://ltalweb4.tal.deere.com:8733/aps/ProcessRequestHandler?userAction=clearCache</value>
+			     <value>http://ltalweb1.tal.deere.com:8101/aps/ProcessRequestHandler?userAction=clearCache</value>
+			</list>
+		</property>		
+		<property name="bucketReleaseRefreshUrlList">
+			<list>
+				 <value>http://ltalweb2.tal.deere.com:8149/aps/ProcessRequestHandler?userAction=reinitializeBucketRelease</value>
+				 <value>http://ltalweb3.tal.deere.com:8139/aps/ProcessRequestHandler?userAction=reinitializeBucketRelease</value>
+				 <value>http://ltalweb4.tal.deere.com:8733/aps/ProcessRequestHandler?userAction=reinitializeBucketRelease</value>
+				 <value>http://ltalweb1.tal.deere.com:8101/aps/ProcessRequestHandler?userAction=reinitializeBucketRelease</value>
+			</list>
+		</property>	
+	</bean>	 						    
+</beans>

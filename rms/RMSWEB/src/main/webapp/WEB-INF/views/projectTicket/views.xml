@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition extends="defaultdashboard" name="projectTicket/projectTickets">
+  		<put-attribute name="body" value="/WEB-INF/views/projectTicket/projectTickets.jsp" />
+ 	</definition>
+ 	<definition name="projectTicket/projectTicketPriority" template="/WEB-INF/views/projectTicket/projectTicketPriority.jsp">
+ 	</definition>
+ 	<definition name="projectStatus/projectTicketStatus" template="/WEB-INF/views/projectTicket/projectTicketStatus.jsp">
+ 	</definition>	
+</tiles-definitions>

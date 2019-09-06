@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_yash_rms_domain_Timehrs" object="${timehrs}" path="/timehrses" z="kHKK4hf/RhmSKkCQV2Szf/DmcH8=">
+        <field:display field="resourceId" id="s_com_yash_rms_domain_Timehrs_resourceId" object="${timehrs}" z="7Du4I6ZH0CcaU33nLNRqnddkv80="/>
+        <field:display field="approved" id="s_com_yash_rms_domain_Timehrs_approved" object="${timehrs}" z="qjF0mvRvP+b5rDWfZfQtP20tv48="/>
+        <field:display field="reportedHrs" id="s_com_yash_rms_domain_Timehrs_reportedHrs" object="${timehrs}" z="iOXu+uUzIS19ndxrWIP9SWSKPws="/>
+        <field:display field="resourceAllocId" id="s_com_yash_rms_domain_Timehrs_resourceAllocId" object="${timehrs}" z="EeS4oaYn4fNFaFyT8kEzD25Mqyg="/>
+        <field:display date="true" dateTimePattern="${timehrs_weekendingdate_date_format}" field="weekEndingDate" id="s_com_yash_rms_domain_Timehrs_weekEndingDate" object="${timehrs}" z="W86Gf6Oe/wFZXRaZjHt2oZcfGa4="/>
+        <field:display field="plannedHrs" id="s_com_yash_rms_domain_Timehrs_plannedHrs" object="${timehrs}" z="MtOOBK3cjwJsJakH0aqo2wSKsIo="/>
+        <field:display field="billedHrs" id="s_com_yash_rms_domain_Timehrs_billedHrs" object="${timehrs}" z="Ywqf+Tr33U+Pkyjnpnfzxt2CO1g="/>
+        <field:display field="remarks" id="s_com_yash_rms_domain_Timehrs_remarks" object="${timehrs}" z="dv0Bf259dbVpFSWXAqgRr/YtXMY="/>
+    </page:show>
+</div>

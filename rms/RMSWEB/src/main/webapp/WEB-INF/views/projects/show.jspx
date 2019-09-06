@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_yash_rms_domain_Project" object="${project}" path="/projects" z="Lypg8ZSRzbpDllwa+D3CrlEtvZU=">
+        <field:display field="projectTrackingCurrencyId" id="s_com_yash_rms_domain_Project_projectTrackingCurrencyId" object="${project}" z="tUeM0ssX6WBok5uKHL/VIK/tAYY="/>
+        <field:display field="offshoreDelMgr" id="s_com_yash_rms_domain_Project_offshoreDelMgr" object="${project}" z="ga5HUolSmZPgmqPou8g1RE8orkc="/>
+        <field:display field="engagementModelId" id="s_com_yash_rms_domain_Project_engagementModelId" object="${project}" z="9lqcg3eQWowjQbS4mevkDZyftg8="/>
+        <field:display field="customerNameId" id="s_com_yash_rms_domain_Project_customerNameId" object="${project}" z="V4mpTv2Z+JzFX2p4hKN5uiOKH10="/>
+        <field:display field="buId" id="s_com_yash_rms_domain_Project_buId" object="${project}" z="xW3E0yXKHy1rxfbZSpm4+9GnRsE="/>
+        <field:display field="projectCategoryId" id="s_com_yash_rms_domain_Project_projectCategoryId" object="${project}" z="+2P/q7DBVI+ngQJhZhyLiM+rDAU="/>
+        <field:display field="invoiceById" id="s_com_yash_rms_domain_Project_invoiceById" object="${project}" z="3j6H571MzsckiReaHL7Gogo+HI8="/>
+        <field:display field="projectMethodologyId" id="s_com_yash_rms_domain_Project_projectMethodologyId" object="${project}" z="pCVFE8RR9mke7GB1yafOIFS7RyY="/>
+        <field:display field="customerContacts" id="s_com_yash_rms_domain_Project_customerContacts" object="${project}" z="w11ChAqMe3FH+nMyJ2KuZC0cgL0="/>
+        <field:display field="deere" id="s_com_yash_rms_domain_Project_deere" object="${project}" z="UaGF6RKJfFBie5mLxNlpx42UqtI="/>
+        <field:display field="onsiteDelMgr" id="s_com_yash_rms_domain_Project_onsiteDelMgr" object="${project}" z="an2q5t1KGTlcUcEi858KZnEMsYU="/>
+        <field:display field="plannedProjCost" id="s_com_yash_rms_domain_Project_plannedProjCost" object="${project}" z="TXsOuNvXqA9XESoh5sHYWlRAd9A="/>
+        <field:display field="plannedProjSize" id="s_com_yash_rms_domain_Project_plannedProjSize" object="${project}" z="xbTgro+QIwF+m9eaUJzZCdzVsvc="/>
+        <field:display date="true" dateTimePattern="${project_projectkickoff_date_format}" field="projectKickOff" id="s_com_yash_rms_domain_Project_projectKickOff" object="${project}" z="etxIotBTp6zTPMcPrVWXvhVHfKY="/>
+        <field:display field="projectName" id="s_com_yash_rms_domain_Project_projectName" object="${project}" z="u6LITxUWYAVkI7qM/Evg5hQWlhM="/>
+        <field:display date="true" dateTimePattern="${project_projectenddate_date_format}" field="projectEndDate" id="s_com_yash_rms_domain_Project_projectEndDate" object="${project}" z="11tcfLIqtKE3Bx6NQvS9dLziqbs="/>
+        <field:display field="description" id="s_com_yash_rms_domain_Project_description" object="${project}" z="A1+UdT6NEH0wJcsEsWwvvBcJgsY="/>
+    </page:show>
+</div>

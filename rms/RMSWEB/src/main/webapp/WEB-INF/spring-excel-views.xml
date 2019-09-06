@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="excelView" class="org.yash.rms.util.GenerateExcelUtility">
+	</bean>
+
+	<bean id="rmExcelView" class="org.yash.rms.excel.RMReportExcelView">
+	</bean>
+
+	<bean id="muneerExcelView" class="org.yash.rms.excel.MuneerReportExcelView">
+	</bean>
+
+
+	<bean id="pwrExcelView" class="org.yash.rms.excel.PWRReportExcelView">
+	</bean>
+
+	
+	<bean id="plExcelView" class="org.yash.rms.excel.PLReportExcelUtility">
+	</bean>
+
+	<bean id="teamExcelView" class="org.yash.rms.excel.TeamReportExcelUtility">
+	</bean>
+	<bean id="resourceMovementReportExcel" class="org.yash.rms.excel.ResourceMovementReportExcel">
+	</bean>
+		<bean id="moduleExcelView" class="org.yash.rms.excel.ModuleReportExcelUtility">	</bean>
+	<bean id="pdfRRFlView" class="org.yash.rms.util.PDFWriter"></bean>
+	<bean id="pdfRMGReportView" class="org.yash.rms.util.RMGReportPDFWriter"></bean>
+	
+	<!-- <bean id="resourceReleaseSummaryPDFView" class="org.yash.rms.util.ResourceReleaseSummaryPDFView"></bean> -->
+	
+	<bean id="utilizationDetailReportExcel" class="org.yash.rms.excel.UtilizationDetailReportExcel"></bean>
+	
+	<!-- <bean id="customizedUtilizationDetailReportExcel" class="org.yash.rms.excel.CustomizedUtilizationDetailReportExcel"></bean> -->
+	
+	<bean id="customizeReportExcelView" class="org.yash.rms.excel.CustomizeReportExcelUtility"></bean>
+	
+	<bean id="currentWeekAllocationReportExcel" class="org.yash.rms.excel.CurrentWeekAllocationReportExcelUtility"></bean>
+	
+	<bean id="customizedHeaderExcelView" class="org.yash.rms.excel.CustomizedHeaderExcelView"></bean>
+	
+	<bean id="requestRequisitionExcelReportView" class="org.yash.rms.excel.RequestRequisitionExcelReportView"></bean>
+	
+	<bean id="requestRequisitionExcelWeeklyReportView" class="org.yash.rms.excel.RequestRequisitionExcelWeeklyReportView"></bean>	
+	<bean id="timeSheetDetailReportExcel" class="org.yash.rms.excel.TimeSheetDetailReportExcel"></bean>
+	
+	<bean id="resourceSkillReportExcelView" class="org.yash.rms.excel.ResourceSkillReportExcelView"></bean>
+	
+	<bean id="rrfSubmissionExcelReportView" class="org.yash.rms.excel.RRFSubmissionExcelReportView"></bean>
+	
+	<bean id="infogramActiveResourceListExcelView" class="org.yash.rms.excel.InfogramActiveResourceListExcelView"></bean>
+
+	<bean id="infogramInActiveResourceListExcelView" class="org.yash.rms.excel.InfogramInActiveResourceListExcelView"></bean>
+	
+</beans>

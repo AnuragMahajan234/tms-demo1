@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" 
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jms="http://www.springframework.org/schema/jms" 
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.0.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<context:property-placeholder properties-ref="environmentSpecificParam" ignore-unresolvable="true"/>
+	
+	<util:properties id="environmentSpecificParam">
+		<prop key="rms.domainName">yash.com</prop>
+		<prop key="rms.serverName">inidradc01</prop>
+	</util:properties>
+	
+<!-- 	<bean id="propertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+        p:location="/spring-configuration/persistence-mysql.properties" /> -->
+        
+        <context:property-placeholder location="classpath*:/spring-configuration/*.properties"/>
+    
+
+    <bean id="sessionFactory"  
+     class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">  
+       <property name="dataSource" ref="dataSource" />  
+       <property name="packagesToScan" value="org.yash.rms.domain" />  
+       <property name="hibernateProperties">  
+          <props>  
+             <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>  
+             <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+             <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+             <prop key="hibernate.lazy">true</prop>
+          </props>  
+       </property>  
+    </bean>  
+
+
+ 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    	<property name="jndiName" value="java:comp/env/jdbc/rms"/>
+	</bean>
+ 
+    <bean id="txManager"  
+     class="org.springframework.orm.hibernate4.HibernateTransactionManager">  
+       <property name="sessionFactory" ref="sessionFactory" />  
+    </bean>  
+    
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+    <bean id="hibernateExceptionTranslator" class="org.springframework.orm.hibernate4.HibernateExceptionTranslator"/>
+
+    <bean id="persistenceExceptionTranslationPostProcessor"  
+
+     class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>  
+     <bean id="resumeUploadPath" class="org.yash.rms.helper.ResourceResumeHelper">
+     <property name="uploadPath" value="${RESUME_UPLOAD_SOURCE_PATH_QUAL}"></property>
+     </bean>
+     
+	<import resource="common-beans.xml" />
+	
+	<!-- Below import used to schedule the job task according to time expressed by cron expression-->
+	
+	<import resource="task_schedular.xml" />
+</beans>

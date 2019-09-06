@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_yash_rms_domain_ResourceAllocation" items="${resourceallocations}" z="Nv31OGhQZTBOkzfcRJI0u9wl/3I=">
+        <table:table data="${resourceallocations}" id="l_com_yash_rms_domain_ResourceAllocation" path="/resourceallocations" z="+I1JZhw6qrR8aaCL2qAwpy0Hhmg=">
+            <table:column id="c_com_yash_rms_domain_ResourceAllocation_projectId" property="projectId" z="MUHrThPs+9hW2YkndXZScvmO87I="/>
+            <table:column id="c_com_yash_rms_domain_ResourceAllocation_employeeId" property="employeeId" z="MpI130DXHyECDS4uspOlpuRtNag="/>
+            <table:column id="c_com_yash_rms_domain_ResourceAllocation_allocatedBy" property="allocatedBy" z="HCBh7UiwchcWrwkzOGRox3MJck0="/>
+            <table:column id="c_com_yash_rms_domain_ResourceAllocation_updatedBy" property="updatedBy" z="3abLKINT0awDQIJPLIaseA765zA="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,315 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" charset="UTF-8">
+<title>Additional Added</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.details td {
+	vertical-align: top;
+}
+.text-break {
+    max-width: 114px;
+    word-break: break-word;
+}
+
+</style>
+</head>
+
+<body style="margin: 0; padding-top: 10px;">
+	<table class="" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: Arial, sans-serif;">
+		<tbody>
+			<tr>
+				<td>
+					<table class="" align="center" border="0" cellpadding="0"
+						cellspacing="0" width="800"
+						style="position: relative; border-collapse: collapse; border-bottom: 1px solid #818181; margin-bottom: 30px;">
+						<tbody>
+							<tr width="800">
+								<td width="71%" style="padding-bottom: 30px;"><img
+									src="https://you.yash.com/_Layouts/YOUPortal/images/yash-logo.png"
+									style="width: 100px; height: 60px;"></td>
+								<td width="29%"
+									style="padding-bottom: 30px;font-family: Arial, sans-serif; position: absolute; top: 5px; right: 0px; text-align: right;">
+									<span
+									style="font-size: 14px; color: #01498B; text-align: right;font-weight:700">Resource
+											Management System </span> <br/> <br/> <span
+									style="padding: 10px 0px; font-size: 10px; color: #333333; text-align: right;">DATE
+										: <span style="font-weight:700">${currentDate}</span>
+								</span> <br/> <span
+									style="padding: 10px 0px; font-size: 10px; color: #333333; text-align: right;">TIME
+										: <span style="font-weight:700">${currentTime} Hrs </span>
+								</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<table class="" align="center" border="0" cellpadding="0"
+						cellspacing="0" width="800" style="border-collapse: collapse;">
+						<tbody>
+							<tr style="font-size: 14px; color: #000;">
+								<td style="font-family: Arial, sans-serif;">
+									<br/>Hello Everyone, <br/><br/> Greetings! <br/>
+									<br/>  Appropriate action need to be taken on  <span style="font-weight: 700; ">RRF (${rrfName}) </span> before
+									<span style="font-weight: 700; background-color: yellow;"> ${futureDate}</span>
+									 as <span style="font-weight: 700; ">Project (${projectName}) </span> is going to be closed by highlighted mentioned date <br/> <br/> The RRF details are
+									mentioned below : <br/> <br/>
+								</td>
+							</tr>
+							<tr>
+								<td bgcolor="#ffffff">
+									<table class="details" border="0" cellpadding="0" cellspacing="0"
+										width="100%" style="border: 1px solid #dddddd;">
+										<tbody>
+											<tr bgcolor="#f2f2f2">
+												<td
+													style="font-size: 14px; color: #1a1a1a; font-weight: 700;font-family: Arial, sans-serif; padding: 15px 5px; text-align: left; word-wrap: normal;">
+													RRF Resource Details</td>
+											</tr>
+
+											<tr>
+												<td style="padding: 0px 0px 0px 0px;">
+													<table border="0" cellpadding="0" cellspacing="0"
+														width="100%">
+														<tbody>
+
+															<tr>
+																<td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">RRF Name</td>
+																			<td width="30" style="width: 30px; font-size: 12px;">
+																				:</td>
+																			<td width="550"
+																				style="width: 550px; font-size: 12px;" valign="top">
+																				${rrfName}</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+
+											<tr>
+												<td style="padding: 0px 0px 0px 0px;">
+													<table class="" border="0" cellpadding="0" cellspacing="0"
+														width="100%">
+														<tbody>
+
+															<tr style="padding-top: 5px">
+																<td>
+
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">Client Name</td>
+																			<td width="30" style="width: 30px; font-size: 12px;">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top">
+																				${clientName}</td>
+																		</tr>
+																	</table>
+
+																</td> <#if groupName?has_content>
+																<td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">Customer group</td>
+																			<td width="30" style="width: 30px; font-size: 12px;">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top">
+																				${groupName}</td>
+																		</tr>
+																	</table>
+
+																</td> </#if>
+																<td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">Indent By</td>
+																			<td width="30" style="width: 30px; font-size: 12px;">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top">
+																				${indentBy}</td>
+																		</tr>
+																	</table>
+
+																</td>
+															</tr>
+															<tr style="padding-top: 5px">
+																<td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">Project Name</td>
+																			<td width="30" style="width: 30px; font-size: 12px;">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top">
+																				${projectName}</td>
+																		</tr>
+																	</table>
+
+																</td>
+
+																<td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">Requesting Practice</td>
+																			<td width="30" style="width: 30px; font-size: 12px;">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top">
+																				${rrfBgBu}</td>
+																		</tr>
+																	</table>
+
+
+																</td>
+
+																<td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">Designation</td>
+																			<td width="30" style="width: 30px; font-size: 12px;">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top">
+																				${designationName}</td>
+																		</tr>
+																	</table>
+
+																</td>
+
+															</tr>
+															<tr style="padding: 5px 0px 5px 0px">
+																<td valign="top">
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">No. of Positions</td>
+																			<td width="30" style="width: 30px; font-size: 12px;">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top">
+																				${noOfResources}</td>
+																		</tr>
+																	</table>
+
+																</td>
+																<#if amJobCode?has_content>
+																<td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">AM Job Code</td>
+																			<td width="30" style="width: 30px; font-size: 12px;" valign="top">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top" class="text-break">
+																				${amJobCode}</td>
+																		</tr>
+																	</table>
+																</td> 
+																</#if>
+
+                                                              <#if successFactorId?has_content>
+                                                              <td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">Success Factor Id</td>
+																			<td width="30" style="width: 30px; font-size: 12px;" valign="top">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top" class="text-break">
+																				${successFactorId}</td>
+																		</tr>
+																	</table>
+																</td> </#if>
+															</tr>
+															<tr style="padding: 5px 0px 5px 0px">
+															<#if requirementArea?has_content>
+                                                              <td>
+																	<table>
+																		<tr style="font-family: Arial, sans-serif;">
+																			<td width="114"
+																				style="font-size: 12px; font-weight: 700;"
+																				valign="top">Requirement Area</td>
+																			<td width="30" style="width: 30px; font-size: 12px;" valign="top">
+																				:</td>
+																			<td width="114"
+																				style="width: 114px; font-size: 12px;" valign="top" class="text-break">
+																				${requirementArea}</td>
+																		</tr>
+																	</table>
+																</td> </#if>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+				
+										</tbody>
+									</table>
+								</td>
+							</tr>
+
+							<!-- -->
+						
+							<!-- -->
+
+							<tr>
+								<td
+									style="padding: 10px 10px 10px 0px; font-size: 14px;">
+									<span style="font-weight: 700; font-family: Arial, sans-serif; color: #525252;"> Please <a href="https://rms.yash.com/rms"
+										style="font-size: 14px; color: #1e73b8; font-weight: 500; text-decoration: none;">click
+											here</a> to login into your account for more information.
+								</span>
+								</td>
+							</tr>
+							<tr style="font-size: 14px;">
+								<td style="padding: 10px 10px 10px 0px; color: #545554; font-family: Arial, sans-serif;">
+									Thank You, <br> Team RMS
+								</td>
+							</tr>
+							<tr style="font-size: 14px;">
+								<td style="padding: 10px 10px 10px 0px;color: #545554; font-family: Arial, sans-serif;">Note : Please do
+									not reply on this mail cause it is system generated</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+</body>
+</html>

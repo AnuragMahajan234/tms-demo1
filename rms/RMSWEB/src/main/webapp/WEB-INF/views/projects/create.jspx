@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_yash_rms_domain_Project" modelAttribute="project" path="/projects" render="${empty dependencies}" z="91DGQoq+Zes+PlkDRhabD2zB8mI=">
+        <field:simple field="resourceAllocations" id="c_com_yash_rms_domain_Project_resourceAllocations" messageCode="entity_reference_not_managed" messageCodeAttribute="Resource Allocation" z="/r3z7nn4Glu8r6OK8CtEarlcFK4="/>
+        <field:simple field="resources" id="c_com_yash_rms_domain_Project_resources" messageCode="entity_reference_not_managed" messageCodeAttribute="Resource" z="swouGXBfn9kSo7s1hQ+ipJukOiE="/>
+        <field:simple field="projectPoes" id="c_com_yash_rms_domain_Project_projectPoes" messageCode="entity_reference_not_managed" messageCodeAttribute="Project Po" z="LePywF9tAarObLQlXU99dDiuNIw="/>
+        <field:select field="projectTrackingCurrencyId" id="c_com_yash_rms_domain_Project_projectTrackingCurrencyId" itemValue="id" items="${currencys}" path="/currencys" z="sSEAk2iO5WEPMFHSplEQLNTSUkw="/>
+        <field:select field="offshoreDelMgr" id="c_com_yash_rms_domain_Project_offshoreDelMgr" itemValue="employeeId" items="${resources}" path="/resources" z="2BOSMP7Ouz18lNw43yZRj+49lRQ="/>
+        <field:select field="engagementModelId" id="c_com_yash_rms_domain_Project_engagementModelId" itemValue="id" items="${engagementmodels}" path="/engagementmodels" z="JuqBoCQQ65ZZ4//yUlfefH0Q61c="/>
+        <field:select field="customerNameId" id="c_com_yash_rms_domain_Project_customerNameId" itemValue="id" items="${customers}" path="/customers" z="Z82TxK9CZTKBbbGBWzXu3YqbDIc="/>
+        <field:select field="buId" id="c_com_yash_rms_domain_Project_buId" itemValue="id" items="${bus}" path="/bus" z="kSywrGjlbyycA4QxcLCijw9VRX8="/>
+        <field:select field="projectCategoryId" id="c_com_yash_rms_domain_Project_projectCategoryId" itemValue="id" items="${projectcategorys}" path="/projectcategorys" z="mlyPO3+sIzxm0OpvahDhxKBa874="/>
+        <field:select field="invoiceById" id="c_com_yash_rms_domain_Project_invoiceById" itemValue="id" items="${invoicebys}" path="/invoicebys" z="c457Ambc4enpiFU8Ew2z7ChLoqk="/>
+        <field:select field="projectMethodologyId" id="c_com_yash_rms_domain_Project_projectMethodologyId" itemValue="id" items="${projectmethodologys}" path="/projectmethodologys" z="kB3qAqaFjSEyC1PETcM02tmXa/0="/>
+        <field:input field="customerContacts" id="c_com_yash_rms_domain_Project_customerContacts" z="QMYRJHKxdiVwwFG2bSnSPwhB1aw="/>
+        <field:checkbox field="deere" id="c_com_yash_rms_domain_Project_deere" z="5/kJbvP60NLKDLpOmXNUdX1q9lM="/>
+        <field:input field="onsiteDelMgr" id="c_com_yash_rms_domain_Project_onsiteDelMgr" z="elUM3iDpq1ZiIWpX4h1tedZJpTs="/>
+        <field:input field="plannedProjCost" id="c_com_yash_rms_domain_Project_plannedProjCost" validationMessageCode="field_invalid_integer" z="5pa9pQltxzPFuxfhrFsfC0UeSQ0="/>
+        <field:input field="plannedProjSize" id="c_com_yash_rms_domain_Project_plannedProjSize" validationMessageCode="field_invalid_integer" z="4cglHLv35xGb8SNhGOqVe7R6NAI="/>
+        <field:datetime dateTimePattern="${project_projectkickoff_date_format}" field="projectKickOff" id="c_com_yash_rms_domain_Project_projectKickOff" z="U/XZagTUN/kl8Mf9i1AsIOoMeQI="/>
+        <field:input field="projectName" id="c_com_yash_rms_domain_Project_projectName" required="true" z="nR335s5XV4CsQVueOUK5pBB6+5k="/>
+        <field:datetime dateTimePattern="${project_projectenddate_date_format}" field="projectEndDate" id="c_com_yash_rms_domain_Project_projectEndDate" z="yT7khzUMad0jOGbwCQFdH6mRG+4="/>
+        <field:input field="description" id="c_com_yash_rms_domain_Project_description" z="DJqjnIWV2qq9IfNnu61WeSIQLWA="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_yash_rms_domain_Project" render="${not empty dependencies}" z="0LZr95tkPxrfiE2dAgX4WKFeHtg="/>
+</div>

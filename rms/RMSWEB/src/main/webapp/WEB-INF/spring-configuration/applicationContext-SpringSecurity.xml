@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" 
+    xmlns:beans="http://www.springframework.org/schema/beans" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd"
+        >
+ 
+    
+ 
+       
+    <!-- HTTP security configurations -->
+   <http pattern="/rest/UnAuthRestImpl/auth**" security="none"/>
+    <http auto-config="true" use-expressions="true" >
+        <form-login login-processing-url="/resources/j_spring_security_check" login-page="/login" authentication-failure-url="/login?login_error=t" 
+        authentication-success-handler-ref="authSuccess" always-use-default-target="true"
+        />
+        <csrf disabled="true"/>
+      <logout logout-success-url="/logout" />
+      
+        <!-- Configure these elements to secure URIs in your application -->
+        <intercept-url pattern="/logout*" access="permitAll" />
+               <intercept-url pattern="/login**" access="permitAll" />
+         <intercept-url pattern="/adminActivity" access="permitAll" />
+        <intercept-url pattern="/customers/**/groups/**" access="isAuthenticated()" />
+        <intercept-url pattern="/customers/**" access="hasAnyRole('ROLE_ADMIN','ROLE_DEL_MANAGER','ROLE_BG_ADMIN')" />
+        <intercept-url pattern="/projects/**" access="hasAnyRole('ROLE_ADMIN','ROLE_DEL_MANAGER','ROLE_BG_ADMIN','ROLE_MANAGER','ROLE_HR')" />
+        <intercept-url pattern="/resourceallocations/**" access="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER','ROLE_BEHALF_MANAGER','ROLE_DEL_MANAGER','ROLE_BG_ADMIN','ROLE_HR')" />
+        <intercept-url pattern="/timehrses/**" access="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER','ROLE_BEHALF_MANAGER','ROLE_DEL_MANAGER','ROLE_BG_ADMIN','ROLE_SEPG_USER')" />
+        <intercept-url pattern="/useractivitys/**" access="hasAnyRole('ROLE_USER','ROLE_ADMIN','ROLE_MANAGER','ROLE_DEL_MANAGER','ROLE_BG_ADMIN','ROLE_BEHALF_MANAGER','ROLE_HR','ROLE_SEPG_USER')" />
+        <intercept-url pattern="/process/**" access="hasAnyRole('ROLE_ADMIN')" /> 
+        <intercept-url pattern="/member/**" access="isAuthenticated()" />
+        <intercept-url pattern="/resources/**/*.css" access="permitAll" />
+        <intercept-url pattern="/resources/**/*.js" access="permitAll" />
+        <intercept-url pattern="/resources/**/*.jpg" access="permitAll" />
+        <intercept-url pattern="/resources/**/*.png" access="permitAll" />
+        <intercept-url pattern="/resources/**/*.ico" access="permitAll" />   
+        <intercept-url pattern="/resourceallocations/**" access="permitAll" />      
+        <intercept-url pattern="/resources/**" access="isAuthenticated()" />
+       
+        <intercept-url pattern="/uploadresources/*" access="hasAnyRole('ROLE_ADMIN','ROLE_BG_ADMIN')" />
+        <intercept-url pattern="/accessDenied.jsp" access="hasAnyRole('ROLE_VISITOR')" />
+        <intercept-url pattern="/requests/*" access="permitAll" />
+        
+      <!--   <intercept-url pattern="/requestsReports/*" access="permitAll" /> -->
+      <!--   <intercept-url pattern="/monitoring/**" access="permitAll" /> -->
+
+        
+        <intercept-url pattern="/**" access="isAuthenticated()" />
+        <custom-filter ref="userSessionFilter" before="FORM_LOGIN_FILTER" />
+	</http>
+    <beans:bean id="userSessionFilter" class="org.yash.rms.filter.UserSessionFilter" />
+    <beans:bean id="authSuccess" class="org.yash.rms.filter.AuthenticationSuccessHandlerImpl" />
+    
+    
+    <beans:bean id="loggerListener" class="org.springframework.security.authentication.event.LoggerListener" />
+
+    <!-- Configure Authentication mechanism -->
+    <authentication-manager alias="authenticationManager">
+        <!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
+        <authentication-provider user-service-ref="userService">
+        </authentication-provider>
+    </authentication-manager>
+</beans:beans>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_yash_rms_domain_Resource" items="${resources}" z="qIwaBIfST0sF94O905v/kl/gOko=">
+        <table:table data="${resources}" id="l_com_yash_rms_domain_Resource" path="/resources" typeIdFieldName="employeeId" z="rNdjxXVd3+0EHVKjUg1cNKsFgcM=">
+            <table:column id="c_com_yash_rms_domain_Resource_file" property="file" z="vhq4kNQ+/DdMSp0FvmC0tb7kGyM="/>
+            <table:column id="c_com_yash_rms_domain_Resource_resumeFileName" property="resumeFileName" z="31dJt9txB7E4ia/mYSJP0u4W93I="/>
+            <table:column id="c_com_yash_rms_domain_Resource_totalPlannedHrs" property="totalPlannedHrs" z="YX+yTBemB+eIp0vIsbpHQgKGp54="/>
+            <table:column id="c_com_yash_rms_domain_Resource_totalReportedHrs" property="totalReportedHrs" z="e3pAV6ayj5+xGjx5mjnSdCELXiY="/>
+            <table:column id="c_com_yash_rms_domain_Resource_yashEmpId" property="yashEmpId" z="zKdXMut/fn1bQgVgQym5R+hdFoo="/>
+        </table:table>
+    </page:list>
+</div>

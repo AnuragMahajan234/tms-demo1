@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<definition extends="default" name="upload">
+		<put-attribute name="body"
+			value="/WEB-INF/views/caticket/uploadcaticket.jsp" />
+	</definition>
+	<definition extends="default" name="caticket/viewticket">
+		<put-attribute name="body"
+			value="/WEB-INF/views/caticket/viewtickets.jsp" />
+	</definition>
+	<definition extends="default" name="caticket/viewReviewTicket">
+		<put-attribute name="body"
+			value="/WEB-INF/views/caticket/viewtickets.jsp" />
+	</definition>
+
+	<definition extends="default" name="caticket/createticket">
+		<put-attribute name="body"
+			value="/WEB-INF/views/caticket/createticket.jsp" />
+	</definition>
+	<definition extends="default" name="caticket/editticket">
+		<put-attribute name="body"
+			value="/WEB-INF/views/caticket/editticket.jsp" />
+	</definition>
+	<definition extends="default" name="caticket/dashboard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/caticket/mydashboard.jsp" />
+	</definition>
+	<definition extends="default" name="caticket/queue">
+		<put-attribute name="body" value="/WEB-INF/views/caticket/queue.jsp" />
+	</definition>
+	<definition extends="default" name="caticket/discrepency">
+		<put-attribute name="body"
+			value="/WEB-INF/views/caticket/discrepency.jsp" />
+	</definition>
+	<definition extends="default" name="caticket/saveDiscrepency">
+		<put-attribute name="body"
+			value="/WEB-INF/views/caticket/save_discrepency_tickets.jsp" />
+	</definition>
+</tiles-definitions>

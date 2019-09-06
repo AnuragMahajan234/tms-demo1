@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is Spring configurations file for JDOrder java project.This file 
+	is imported in applicationContext-root-Local/Devl.xml file -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jms="http://www.springframework.org/schema/jms" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring  http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd 		
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.2.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-4.2.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+ 	<context:annotation-config />
+	<context:component-scan base-package="org.yash.rms.domain" />
+	<context:component-scan base-package="org.yash.rms.rest.dao.*" />
+	<context:component-scan base-package="org.yash.rms.rest" />
+	<context:component-scan base-package="org.yash.rms.service" />
+	<context:component-scan base-package="org.yash.rms.quartzscheduler" />
+	<context:component-scan base-package="org.yash.rms.mapper" />
+	<context:component-scan base-package="org.yash.rms.service.impl" />
+	<context:component-scan base-package="org.yash.rms.dao" />
+	<context:component-scan base-package="org.yash.rms.dao.impl" />
+	<context:component-scan base-package="org.yash.rms.util" />
+	<context:component-scan base-package="org.yash.rms.helper" />
+	<context:component-scan base-package="org.yash.rms.mobile.helper" />
+	<context:component-scan base-package="org.yash.rms.ldap" />
+	
+
+	<bean id="mapper" class="org.dozer.DozerBeanMapper">
+		<property name="mappingFiles">
+			<list>
+				<value>spring-configuration/dozerBeanMapping.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="freemarkerConfiguration"
+		class="org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean">
+		<property name="templateLoaderPath" value="/spring-configuration/templates/" />
+	</bean>
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${email.host}" />
+		<property name="protocol" value="${email.protocol}" />
+		<property name="port" value="${email.port}" />
+		<property name="username" value="${email.username}" />
+		<property name="password" value="${email.password}" />
+		<!-- <property name="javaMailProperties"> <props> <prop key="mail.smtp.auth">true</prop> 
+			<prop key="mail.smtp.starttls.enable">true</prop> </props> </property> -->
+	</bean>
+
+	<context:annotation-config />
+
+</beans> 
+	    

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="defaultdashboard" name="orghierarchys/list">
+        <put-attribute name="body" value="/WEB-INF/views/orghierarchys/OrgList.jsp"/>
+    </definition>
+<definition extends="default" name="orghierarchys/show">
+        <put-attribute name="body" value="/WEB-INF/views/orghierarchys/show.jspx"/>
+    </definition>
+<definition extends="default" name="orghierarchys/create">
+        <put-attribute name="body" value="/WEB-INF/views/orghierarchys/create.jspx"/>
+    </definition>
+<definition extends="default" name="orghierarchys/update">
+        <put-attribute name="body" value="/WEB-INF/views/orghierarchys/update.jspx"/>
+    </definition>
+    
+   <!--  <definition extends="default" name="orghierarchys/showlist">
+        <put-attribute name="body" value="/WEB-INF/views/orghierarchys/moveOrg.jsp"/>
+    </definition>
+     -->
+    
+     <definition name="orghierarchys/showlist" template="/WEB-INF/views/orghierarchys/moveOrg.jsp" >
+  </definition>
+  
+</tiles-definitions>

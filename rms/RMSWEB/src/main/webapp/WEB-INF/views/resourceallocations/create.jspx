@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_yash_rms_domain_ResourceAllocation" modelAttribute="resourceAllocation" path="/resourceallocations" render="${empty dependencies}" z="2AfF4QC64hr7rUSL2ovKng+fJOI=">
+        <field:select field="projectId" id="c_com_yash_rms_domain_ResourceAllocation_projectId" itemValue="id" items="${projects}" path="/projects" z="O3A0DBPZTge4X6WYzsIdJbs0M6A="/>
+        <field:select field="employeeId" id="c_com_yash_rms_domain_ResourceAllocation_employeeId" itemValue="employeeId" items="${resources}" path="/resources" z="WTAy99pRinPaTGLD3ZVrFAxyZfM="/>
+        <field:input field="allocationSeq" id="c_com_yash_rms_domain_ResourceAllocation_allocationSeq" validationMessageCode="field_invalid_integer" z="F5JdakdWidUfgj+/puYbvrkzjX4="/>
+        <field:datetime dateTimePattern="${resourceAllocation_allocstartdate_date_format}" field="allocStartDate" id="c_com_yash_rms_domain_ResourceAllocation_allocStartDate" z="aN+uVEiE8s6v6fdYKQgTnlHrAuY="/>
+        <field:datetime dateTimePattern="${resourceAllocation_allocenddate_date_format}" field="allocEndDate" id="c_com_yash_rms_domain_ResourceAllocation_allocEndDate" z="KRlu/9qcUAcG7fi5Yu9TvXcSXaQ="/>
+        <field:checkbox field="allocBlock" id="c_com_yash_rms_domain_ResourceAllocation_allocBlock" z="RB4xZqi+Afu5w+xo3BaF8o/1BmA="/>
+        <field:input field="allocRemarks" id="c_com_yash_rms_domain_ResourceAllocation_allocRemarks" z="mAPxHO+Y7jIeC+KYt21RLnruVxA="/>
+        <field:checkbox field="curProj" id="c_com_yash_rms_domain_ResourceAllocation_curProj" z="/nSM+u8BeDjfj6QLrAacZPVak20="/>
+        <field:checkbox field="billable" id="c_com_yash_rms_domain_ResourceAllocation_billable" z="hcOLaGpi5aifOzjFLrIx39V9e5U="/>
+        <field:input field="allocHrs" id="c_com_yash_rms_domain_ResourceAllocation_allocHrs" validationMessageCode="field_invalid_integer" z="uQ896/H9+ltWAXu6zO7TzcwY8cg="/>
+        <field:select field="rateId" id="c_com_yash_rms_domain_ResourceAllocation_rateId" itemValue="id" items="${rateids}" path="/rateids" z="oU9BOz8JArqZ8ROvMhG7ft2Gyfs="/>
+        <field:select field="allocationTypeId" id="c_com_yash_rms_domain_ResourceAllocation_allocationTypeId" itemValue="id" items="${allocationtypes}" path="/allocationtypes" z="WYmEauyPYs8lrcw1B+dmXG0iyeQ="/>
+        <field:simple field="timehrss" id="c_com_yash_rms_domain_ResourceAllocation_timehrss" messageCode="entity_reference_not_managed" messageCodeAttribute="Timehrs" z="m9obIuEBliAPWTpO5RUuhzxb1cc="/>
+        <field:simple field="userActivities" id="c_com_yash_rms_domain_ResourceAllocation_userActivities" messageCode="entity_reference_not_managed" messageCodeAttribute="User Activity" z="wDIqL+GSKzmkCn3ThNO07vKiyg0="/>
+        <field:select field="ownershipId" id="c_com_yash_rms_domain_ResourceAllocation_ownershipId" itemValue="id" items="${ownerships}" path="/ownerships" z="wtw4Ba6B7np6g1TNEdPleB8+NG8="/>
+        <field:select field="allocatedBy" id="c_com_yash_rms_domain_ResourceAllocation_allocatedBy" itemValue="employeeId" items="${resources}" path="/resources" z="SErYN4R/Tr1rATSITwSkPUmOcO8="/>
+        <field:select field="updatedBy" id="c_com_yash_rms_domain_ResourceAllocation_updatedBy" itemValue="employeeId" items="${resources}" path="/resources" z="pQHMvsRkP/UzUvYVRUHT9LD6zR0="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_yash_rms_domain_ResourceAllocation" render="${not empty dependencies}" z="u8+luNVc9dl8T7UUr/+HmYG7BaI="/>
+</div>

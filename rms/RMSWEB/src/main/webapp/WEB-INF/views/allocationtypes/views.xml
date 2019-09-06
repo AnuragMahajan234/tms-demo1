@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="defaultdashboard" name="allocationtypes/list">
+        <put-attribute name="body" value="/WEB-INF/views/allocationtypes/list.jsp"/>
+    </definition>
+<definition extends="default" name="allocationtypes/show">
+        <put-attribute name="body" value="/WEB-INF/views/allocationtypes/show.jspx"/>
+    </definition>
+<definition extends="default" name="allocationtypes/create">
+        <put-attribute name="body" value="/WEB-INF/views/allocationtypes/create.jspx"/>
+    </definition>
+<definition extends="default" name="allocationtypes/update">
+        <put-attribute name="body" value="/WEB-INF/views/allocationtypes/update.jspx"/>
+    </definition>
+</tiles-definitions>
