@@ -1,0 +1,47 @@
+04-Jun-2019 12:21:10.503 INFO [http-nio-9090-exec-2] org.apache.catalina.core.ApplicationContext.log HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+04-Jun-2019 12:21:10.503 INFO [http-nio-9090-exec-2] org.apache.catalina.core.ApplicationContext.log HTMLManager: init: Global resources are available
+04-Jun-2019 12:21:10.619 INFO [http-nio-9090-exec-2] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 12:22:30.506 INFO [http-nio-9090-exec-3] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+04-Jun-2019 12:22:30.506 INFO [http-nio-9090-exec-3] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+04-Jun-2019 12:22:30.507 INFO [http-nio-9090-exec-3] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 12:22:30.520 INFO [http-nio-9090-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 12:22:30.527 INFO [http-nio-9090-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/hello'
+04-Jun-2019 12:22:31.602 INFO [http-nio-9090-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/hello'
+04-Jun-2019 12:22:31.603 INFO [http-nio-9090-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to D:\apache-tomcat-8.5.41\webapps\hello.war
+04-Jun-2019 12:22:53.300 INFO [http-nio-9090-exec-3] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 12:25:31.143 INFO [http-nio-9090-exec-14] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 12:25:31.151 INFO [http-nio-9090-exec-15] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 12:25:31.162 INFO [http-nio-9090-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/hello'
+04-Jun-2019 12:25:32.598 INFO [http-nio-9090-exec-15] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/hello'
+04-Jun-2019 12:25:32.598 INFO [http-nio-9090-exec-15] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to D:\apache-tomcat-8.5.41\webapps\hello.war
+04-Jun-2019 15:16:40.434 INFO [http-nio-9090-exec-4] org.apache.catalina.core.ApplicationContext.log HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+04-Jun-2019 15:16:40.434 INFO [http-nio-9090-exec-4] org.apache.catalina.core.ApplicationContext.log HTMLManager: init: Global resources are available
+04-Jun-2019 15:16:40.445 INFO [http-nio-9090-exec-4] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:18:06.127 INFO [http-nio-9090-exec-7] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:18:21.704 INFO [http-nio-9090-exec-10] org.apache.catalina.core.ApplicationContext.log HTMLManager: stop: Stopping web application '/hello'
+04-Jun-2019 15:18:21.981 INFO [http-nio-9090-exec-10] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:18:25.166 INFO [http-nio-9090-exec-4] org.apache.catalina.core.ApplicationContext.log HTMLManager: start: Starting web application '/hello'
+04-Jun-2019 15:18:26.764 INFO [http-nio-9090-exec-4] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:18:40.159 INFO [http-nio-9090-exec-8] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:21:35.300 INFO [http-nio-9090-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+04-Jun-2019 15:21:35.300 INFO [http-nio-9090-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+04-Jun-2019 15:21:35.301 INFO [http-nio-9090-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:21:35.303 INFO [http-nio-9090-exec-17] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:21:35.305 INFO [http-nio-9090-exec-18] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/hello'
+04-Jun-2019 15:21:36.300 INFO [http-nio-9090-exec-15] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/hello'
+04-Jun-2019 15:21:36.300 INFO [http-nio-9090-exec-15] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to D:\apache-tomcat-8.5.41\webapps\hello.war
+04-Jun-2019 15:22:16.213 INFO [http-nio-9090-exec-20] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:22:34.025 INFO [http-nio-9090-exec-17] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:24:19.087 INFO [http-nio-9090-exec-22] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:24:19.090 INFO [http-nio-9090-exec-21] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:24:19.091 INFO [http-nio-9090-exec-23] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/hello'
+04-Jun-2019 15:24:19.986 INFO [http-nio-9090-exec-24] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:24:20.297 INFO [http-nio-9090-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/hello'
+04-Jun-2019 15:24:20.297 INFO [http-nio-9090-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to D:\apache-tomcat-8.5.41\webapps\hello.war
+04-Jun-2019 15:24:39.902 INFO [http-nio-9090-exec-25] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:26:21.259 INFO [http-nio-9090-exec-36] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:26:21.261 INFO [http-nio-9090-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+04-Jun-2019 15:26:21.263 INFO [http-nio-9090-exec-37] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/hello'
+04-Jun-2019 15:26:22.140 INFO [http-nio-9090-exec-36] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/hello'
+04-Jun-2019 15:26:22.140 INFO [http-nio-9090-exec-36] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to D:\apache-tomcat-8.5.41\webapps\hello.war
+04-Jun-2019 15:27:05.234 INFO [http-nio-9090-exec-42] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'

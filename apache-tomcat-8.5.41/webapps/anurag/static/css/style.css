@@ -1,0 +1,12 @@
+.myfooter{
+	background:black;
+
+}
+
+.myfooter .container{
+
+	padding-top:10px;
+	padding-bottom:10px;
+	color:white;
+	margin-top: 20px;
+}

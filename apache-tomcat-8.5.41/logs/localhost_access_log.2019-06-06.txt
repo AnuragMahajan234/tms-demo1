@@ -1,0 +1,17 @@
+127.0.0.1 - test [06/Jun/2019:12:19:43 +0530] "GET /manager/text/list HTTP/1.1" 200 291
+127.0.0.1 - test [06/Jun/2019:12:19:43 +0530] "GET /manager/text/list HTTP/1.1" 200 291
+127.0.0.1 - test [06/Jun/2019:12:19:45 +0530] "GET /manager/text/undeploy?path=%2Fspringdemoapp HTTP/1.1" 200 73
+127.0.0.1 - test [06/Jun/2019:12:19:51 +0530] "PUT /manager/text/deploy?path=%2Fspringdemoapp HTTP/1.1" 200 71
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:55 +0530] "GET / HTTP/1.1" 200 11403
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:56 +0530] "GET /tomcat.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:56 +0530] "GET /tomcat.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:56 +0530] "GET /asf-logo-wide.svg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:56 +0530] "GET /bg-nav.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:56 +0530] "GET /bg-upper.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:56 +0530] "GET /bg-button.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:56 +0530] "GET /bg-middle.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:58 +0530] "GET /manager/html HTTP/1.1" 401 2562
+0:0:0:0:0:0:0:1 - test [06/Jun/2019:12:20:59 +0530] "GET /manager/html HTTP/1.1" 200 25768
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:59 +0530] "GET /manager/images/tomcat.gif HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:20:59 +0530] "GET /manager/images/asf-logo.svg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:12:21:02 +0530] "GET /springdemoapp/ HTTP/1.1" 200 5
