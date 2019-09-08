@@ -12,7 +12,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 			<property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
 		<property name="hibernate-dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
 		<property name="hibernate.enable_lazy_load_no_trans" value="true"/>
-<!-- property name="hibernate.hbm2ddl.auto" value="update"/-->
+<!--property name="hibernate.hbm2ddl.auto" value="update"  /-->
 <property name="hibernate.cache.use_query_cache" value="false"/>
 <property name="hibernate.cache.use_second_level_cache" value="false"/>
 <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
