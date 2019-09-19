@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class demomethod {
-
+	
+	Map<String, List<DropdownRequestTms>> fetchRequestFormData = new ArrayList();
 	
 	List<DropdownRequestTms> technologyList = new ArrayList();
 	List<TechnologyTMS> techList=TechnologyTMSDao.findAll();
@@ -53,11 +54,11 @@ public class demomethod {
 	
 	List<DropdownRequestTms> trainingMode = new ArrayList();
 	DropdownRequestTms mode1 = new DropdownRequestTms();
-	mode.setId("ONLINE");
+	mode.setId(1);
 	mode.setName("ONLINE");
 	
 	DropdownRequestTms mode2 = new DropdownRequestTms();
-	mode.setId("OFFLINE");
+	mode.setId(2);
 	mode.setName("OFFLINE");
 	
 	trainingMode.add(mode1);	
@@ -65,11 +66,11 @@ public class demomethod {
 	
 	List<DropdownRequestTms> trainingType = new ArrayList();
 	DropdownRequestTms type1 = new DropdownRequestTms();
-	mode.setId("OPEN");
+	mode.setId(1);
 	mode.setName("OPEN");
 	
 	DropdownRequestTms type2 = new DropdownRequestTms();
-	mode.setId("CLOSED");
+	mode.setId(2);
 	mode.setName("CLOSED");
 	
 	trainingMode.add(type1);	
@@ -77,20 +78,29 @@ public class demomethod {
 	
 	List<DropdownRequestTms> trainingPriority = new ArrayList();
 	DropdownRequestTms p1 = new DropdownRequestTms();
-	mode.setId("HIGH");
+	mode.setId(1);
 	mode.setName("HIGH");
 	
 	DropdownRequestTms p2 = new DropdownRequestTms();
-	mode.setId("MEDIUM");
+	mode.setId(2);
 	mode.setName("MEDIUM");
 	
 	DropdownRequestTms p3 = new DropdownRequestTms();
-	mode.setId("LOW");
+	mode.setId(3);
 	mode.setName("LOW");
 	
 	trainingMode.add(p1);	
 	trainingMode.add(p2);	
 	trainingMode.add(p3);
+	
+	fetchRequestFormData.add(technologyList);
+	fetchRequestFormData.add(locationList);
+	fetchRequestFormData.add(resourceList);
+	fetchRequestFormData.add(statusList);
+	fetchRequestFormData.add(projectList);
+	fetchRequestFormData.add(trainingMode);
+	fetchRequestFormData.add(trainingType);
+	fetchRequestFormData.add(trainingPriority);
 	
 	
 	}
