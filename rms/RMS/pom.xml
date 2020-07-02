@@ -11,7 +11,7 @@
 		<hibernate.version>5.2.10.Final</hibernate.version>
 		<slf4j.version>1.5.11</slf4j.version>
 		<dozer.version>5.3.1</dozer.version>
-		<mysql.connector.version>5.1.6</mysql.connector.version>
+		<mysql.connector.version>8.0.16</mysql.connector.version>
 		<javaassist.version>3.18.0-GA</javaassist.version>
 		<commons.pool.version>1.5</commons.pool.version>
 		<spring-security.version>4.2.10.RELEASE</spring-security.version>
